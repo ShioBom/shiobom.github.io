@@ -119,7 +119,7 @@
 
 
 
-  <title>ShioBom的个人博客</title>
+  <title> | ShioBom的个人博客</title>
   
 
 
@@ -138,8 +138,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,9 +211,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -244,9 +243,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/07/10/GitFlow/" itemprop="url">Untitled</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -294,9 +291,7 @@
       
 
       
-        
-          
-            <p>git flow :一种代码管理方案<br>推荐阅读文章:</p>
+        <p>git flow :一种代码管理方案<br>推荐阅读文章:</p>
 <ul>
 <li><a href="https://www.cnblogs.com/cnblogsfans/p/5075073.html" target="_blank" rel="noopener">Git Flow在团队中的最佳实践</a><h4 id="Git-Flow-常用的分支"><a href="#Git-Flow-常用的分支" class="headerlink" title="Git Flow 常用的分支"></a>Git Flow 常用的分支</h4></li>
 <li>Production分支<br>  也就是我们经常使用的Master分支，这个分支最近发布到生产环境的代码，最近发布的Release， 这个分支只能从其他分支合并，不能在这个分支直接修改</li>
@@ -306,8 +301,6 @@
 <li>HotFix分支<br>  当我们在Production发现新的Bug时候，我们需要创建一个Hotfix, 完成Hotfix后，我们合并回Master和Develop分支，所以Hotfix的改动会进入下一个Release</li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -324,12 +317,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -339,10 +332,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -350,6 +344,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -370,8 +368,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -413,6 +420,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Git-Flow-常用的分支"><span class="nav-number">1.</span> <span class="nav-text">Git Flow 常用的分支</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -535,6 +558,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
 
   
 
