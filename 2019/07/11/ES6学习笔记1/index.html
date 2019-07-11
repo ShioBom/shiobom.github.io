@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        ES6学习笔记1 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>鱼玉玉玉</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#07-11-个人总结"><span class="toc-text">07-11 个人总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6"><span class="toc-text">ES6</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Array"><span class="toc-text">Array</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#find-callback-ele-index-arr"><span class="toc-text">find(callback(ele,index,arr))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#findIndex-callback-ele-index-arr"><span class="toc-text">findIndex(callback(ele,index,arr))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#entries-keys-values"><span class="toc-text">entries(),keys(),values()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解构赋值"><span class="toc-text">解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的结构赋值"><span class="toc-text">数组的结构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象的解构赋值"><span class="toc-text">对象的解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串的解构赋值"><span class="toc-text">字符串的解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数参数的解构赋值"><span class="toc-text">函数参数的解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解构赋值的用处"><span class="toc-text">解构赋值的用处</span></a></li></ol></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        ES6学习笔记1
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-07-11 13:57:15</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#ES6" title="ES6">ES6</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="07-11-个人总结"><a href="#07-11-个人总结" class="headerlink" title="07-11 个人总结"></a>07-11 个人总结</h1><h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><h4 id="find-callback-ele-index-arr"><a href="#find-callback-ele-index-arr" class="headerlink" title="find(callback(ele,index,arr))"></a>find(callback(ele,index,arr))</h4><p>find 方法对数组中的每一项元素执行一次 callback 函数,直至某个 callback 返回 true ,立即返回该元素的值</p>
+<ul>
+<li><code>ele</code>:当前遍历到的元素</li>
+<li><code>index</code>:当前索引</li>
+<li><code>arr</code>:数组本身</li>
+<li><code>返回值</code>:返回==第一个==满足条件的元素,若没有满足条件的值,返回 undefined<blockquote>
+<p>find()方法不会改变原数组</p>
+</blockquote>
+<h4 id="findIndex-callback-ele-index-arr"><a href="#findIndex-callback-ele-index-arr" class="headerlink" title="findIndex(callback(ele,index,arr))"></a>findIndex(callback(ele,index,arr))</h4>findIndex 方法对数组中的每个数组索引执行一次 callback 函数，直到找到一个 callback 函数返回 true 。如果找到这样的元素，findIndex 会立即返回该元素的索引。</li>
+<li><code>ele</code>:当前遍历到的元素</li>
+<li><code>index</code>:当前索引</li>
+<li><code>arr</code>:调用findIndex的数组本身</li>
+<li><code>返回值</code>:返回==第一个==满足条件的元素的索引值,若没有满足条件的元素,返回-1<blockquote>
+<p>findIndex不会修改所调用的数组。</p>
+</blockquote>
+<h4 id="entries-keys-values"><a href="#entries-keys-values" class="headerlink" title="entries(),keys(),values()"></a>entries(),keys(),values()</h4>以上三种方法均用于遍历数组,返回的都是一个遍历器对象,只是keys()是对键名的遍历,values()是对键值得遍历,entries()是对整个键值对的遍历。</li>
+<li><code>遍历方式</code>:<ul>
+<li>next() :返回一个对象,value属性指迭代器中的元素,done指示迭代是否完成</li>
+<li>for…of : 循环遍历<br>通过下面的实例来了解<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [&#123;<span class="attr">name</span>: <span class="string">"juli"</span>,<span class="attr">pwd</span>: <span class="string">"123"</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">"julia"</span>,<span class="attr">pwd</span>: <span class="string">"456"</span>&#125;]</span><br><span class="line"><span class="built_in">console</span>.log(arr.entries().next()); </span><br><span class="line"><span class="comment">//&#123; value: [ 0, &#123; name: 'juli', pwd: '123' &#125; ], done: false &#125;</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> iterator <span class="keyword">of</span> arr.entries()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(iterator); </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//[ 0, &#123; name: 'juli', pwd: '123' &#125; ]</span></span><br><span class="line"><span class="comment">//[ 1, &#123; name: 'julia', pwd: '456' &#125; ]</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h3><h4 id="数组的结构赋值"><a href="#数组的结构赋值" class="headerlink" title="数组的结构赋值"></a>数组的结构赋值</h4><ol>
+<li>如果解构不成功,变量的值等于 undefined ;</li>
+<li>解构赋值允许指定默认值,但 只有当一个数组成员严格等于undefined,默认值才会生效</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [x=f()]=[<span class="number">1</span>];  <span class="comment">//函数 f()不会执行</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>默认值可以引用结构赋值的其他变量,但必须是已经定义了的</li>
+<li>属性是有次序的,和值一一对应</li>
+</ol>
+<h4 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h4><ol>
+<li>属性没有次序</li>
+<li>变量必须与对象的属性同名,才能取到值</li>
+<li>对象的解构赋值,可以方便地将现有对象的方法,赋值到某个变量</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;log,sin,cos&#125; = <span class="built_in">Math</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><p>对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; <span class="attr">foo</span>: baz &#125; = &#123; <span class="attr">foo</span>: <span class="string">"aaa"</span>, <span class="attr">bar</span>: <span class="string">"bbb"</span> &#125;;</span><br><span class="line">bar <span class="comment">// "aaa"</span></span><br><span class="line">foo <span class="comment">// error: foo is not defined</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果解构不成功,变量的值等于undefined;</p>
+</li>
+<li><p>也可以用来指定默认值</p>
+</li>
+</ol>
+<h4 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a>字符串的解构赋值</h4><ol>
+<li>字符串也可以解构赋值。这是因为此时，字符串被转换成了一个类似数组的对象。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, c, d, e] = <span class="string">'hello'</span>;</span><br><span class="line">a <span class="comment">// "h"</span></span><br><span class="line">b <span class="comment">// "e"</span></span><br><span class="line">c <span class="comment">// "l"</span></span><br><span class="line">d <span class="comment">// "l"</span></span><br><span class="line">e <span class="comment">// "o"</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="函数参数的解构赋值"><a href="#函数参数的解构赋值" class="headerlink" title="函数参数的解构赋值"></a>函数参数的解构赋值</h4><ol>
+<li>函数参数的解构也可以使用默认值。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">move</span>(<span class="params">&#123;x = <span class="number">0</span>, y = <span class="number">0</span>&#125; = &#123;&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> [x, y];</span><br><span class="line">&#125;</span><br><span class="line">move(&#123;<span class="attr">x</span>: <span class="number">3</span>, <span class="attr">y</span>: <span class="number">8</span>&#125;); <span class="comment">// [3, 8]</span></span><br><span class="line">move(&#123;<span class="attr">x</span>: <span class="number">3</span>&#125;); <span class="comment">// [3, 0]</span></span><br><span class="line">move(&#123;&#125;); <span class="comment">// [0, 0]</span></span><br><span class="line">move(); <span class="comment">// [0, 0]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>如果函数 foo 调用时没提供参数，变量 x 和 y 就不会生成，从而报错。通过提供函数参数的默认值，就可以避免这种情况</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">&#123;x, y = <span class="number">5</span>&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x, y);</span><br><span class="line">&#125;</span><br><span class="line">foo(&#123;&#125;) <span class="comment">// undefined 5</span></span><br><span class="line">foo(&#123;<span class="attr">x</span>: <span class="number">1</span>&#125;) <span class="comment">// 1 5</span></span><br><span class="line">foo(&#123;<span class="attr">x</span>: <span class="number">1</span>, <span class="attr">y</span>: <span class="number">2</span>&#125;) <span class="comment">// 1 2</span></span><br><span class="line">foo() <span class="comment">// TypeError: Cannot read property 'x' of undefined</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="解构赋值的用处"><a href="#解构赋值的用处" class="headerlink" title="解构赋值的用处"></a>解构赋值的用处</h4><ul>
+<li><p>交换变量的值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x=<span class="number">1</span>,y=<span class="number">2</span>;</span><br><span class="line">[x,y]=[<span class="number">2</span>,<span class="number">1</span>];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>取出从函数中返回的多个值</p>
+</li>
+<li><p>函数参数的定义</p>
+</li>
+<li><p>提取 json 数据</p>
+</li>
+<li><p>函数参数的默认值</p>
+</li>
+<li><p>遍历 Map 结构</p>
+<blockquote>
+<p>解构赋值的规则是，只要等号右边的值不是对象或数组，就先将其转为对象。由于 undefined 和 null 无法转为对象，所以对它们进行解构赋值，都会报错。</p>
+</blockquote>
+</li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
