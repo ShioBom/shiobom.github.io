@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        tags - undefined
         
     </title>
 
@@ -45,10 +45,10 @@
 <div class="nav" id="nav">
     <div class="avatar-name">
         <div class="avatar ">
-            <img src="/" />
+            <img src="/img/avatar.jpeg" />
         </div>
         <div class="name">
-            <i>John Doe</i>
+            <i>鱼玉玉玉</i>
         </div>
     </div>
     <div class="contents" id="nav-content">
@@ -56,34 +56,30 @@
             <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>HOME</span>
+                    <span>主页</span>
                 </a>
             </li>
-            <li >
+            <li  class=active >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>TAGS</span>
+                    <span>标签</span>
                 </a>
             </li>
             <li >
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>ARCHIVES</span>
+                    <span>存档</span>
                 </a>
             </li>
             <li >
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>ABOUT</span>
+                    <span>关于</span>
                 </a>
             </li>
             
         </ul>
     </div>
-    
-        <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-Flow-常用的分支"><span class="toc-text">Git Flow 常用的分支</span></a></li></ol>
-</div>
     
 </div>
 
@@ -93,7 +89,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input"/>
-            <span id="begin-search">search</span>
+            <span id="begin-search">搜索</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -109,44 +105,6 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-
-
-<div class="post-container">
-    <div class="post-title">
-        
-    </div>
-
-    <div class="post-meta">
-        <span class="attr">Post：<span>2019-07-10 18:06:43</span></span>
-        
-        </span>
-        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
-</span>
-</span>
-    </div>
-    <div class="post-content ">
-        <p>git flow :一种代码管理方案<br>推荐阅读文章:</p>
-<ul>
-<li><a href="https://www.cnblogs.com/cnblogsfans/p/5075073.html" target="_blank" rel="noopener">Git Flow在团队中的最佳实践</a><h4 id="Git-Flow-常用的分支"><a href="#Git-Flow-常用的分支" class="headerlink" title="Git Flow 常用的分支"></a>Git Flow 常用的分支</h4></li>
-<li>Production分支<br>  也就是我们经常使用的Master分支，这个分支最近发布到生产环境的代码，最近发布的Release， 这个分支只能从其他分支合并，不能在这个分支直接修改</li>
-<li>Develop分支<br>  这个分支是我们是我们的主开发分支，包含所有要发布到下一个Release的代码，这个主要合并与其他分支，比如Feature分支</li>
-<li>Feature分支<br>  这个分支主要是用来开发一个新的功能，一旦开发完成，我们合并回Develop分支进入下一个Release</li>
-<li>Release分支<br>  当你需要一个发布一个新Release的时候，我们基于Develop分支创建一个Release分支，完成Release后，我们合并到Master和Develop分支</li>
-<li>HotFix分支<br>  当我们在Production发现新的Bug时候，我们需要创建一个Hotfix, 完成Hotfix后，我们合并回Master和Develop分支，所以Hotfix的改动会进入下一个Release</li>
-</ul>
-
-        
-        <br />
-        <div id="comment-container">
-        </div>
-        <div id="disqus_thread"></div>
-
-        <div id="lv-container">
-        </div>
-
-    </div>
-</div>
-
     </div>
 </div>
 
@@ -185,7 +143,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = ""
     window.hexo_root = "/"
-    window.isPost = true
+    window.isPost = false
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
