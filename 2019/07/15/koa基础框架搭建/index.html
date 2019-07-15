@@ -11,7 +11,7 @@
 
     <title>
         
-        ES6学习笔记3 - undefined
+        koa基础框架搭建 - undefined
         
     </title>
 
@@ -82,7 +82,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建项目"><span class="toc-text">创建项目</span></a></li></ol>
 </div>
     
 </div>
@@ -113,15 +113,15 @@
 
 <div class="post-container">
     <div class="post-title">
-        ES6学习笔记3
+        koa基础框架搭建
     </div>
 
     <div class="post-meta">
-        <span class="attr">Post：<span>2019-07-15 10:24:43</span></span>
+        <span class="attr">Post：<span>2019-07-15 12:41:51</span></span>
         
         <span class="attr">Tags：/
         
-        <a class="tag" href="/tags/#Unicode  模板字符串  rest参数  扩展运算符  proxy  async" title="Unicode  模板字符串  rest参数  扩展运算符  proxy  async">Unicode  模板字符串  rest参数  扩展运算符  proxy  async</a>
+        <a class="tag" href="/tags/#Node.js Koa" title="Node.js Koa">Node.js Koa</a>
         <span>/</span>
         
         
@@ -131,7 +131,21 @@
 </span>
     </div>
     <div class="post-content ">
-        
+        <h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p>创建一个项目目录，然后快速生成一个 package.json 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>安装koa</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install koa -S</span><br></pre></td></tr></table></figure>
+
+<p>创建app.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">async</span> ctx =&gt; &#123;</span><br><span class="line">  ctx.body = <span class="string">'Wise Wrong'</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在 package.json 中添加启动指令<br><img src="./assets/script.png" alt="&quot;start&quot;:&quot;node app.js&quot;"><br>一个基础的koa项目就完成了<br>如果觉得可以手动搭建麻烦，可以使用脚手架 koa-generato 来生成项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install koa-generator -g</span><br><span class="line">koa2 project_name</span><br></pre></td></tr></table></figure>
+
+<p>再执行 npm install 安装依赖，npm start 启动项目</p>
+<p>##</p>
+
         
         <br />
         <div id="comment-container">

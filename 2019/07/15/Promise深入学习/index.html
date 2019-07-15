@@ -56,25 +56,25 @@
             <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>主页</span>
+                    <span>HOME</span>
                 </a>
             </li>
             <li >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>标签</span>
+                    <span>TAGS</span>
                 </a>
             </li>
             <li >
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>存档</span>
+                    <span>ARCHIVES</span>
                 </a>
             </li>
             <li >
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>关于</span>
+                    <span>ABOUT</span>
                 </a>
             </li>
             
@@ -82,7 +82,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise-用途"><span class="toc-text">Promise 用途</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise-用途"><span class="toc-text">Promise 用途</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#promise-嵌套"><span class="toc-text">promise 嵌套</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#断开的-promise-链"><span class="toc-text">断开的 promise 链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#混乱的集合"><span class="toc-text">混乱的集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#捕获错误的两种方式"><span class="toc-text">捕获错误的两种方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise的局限性"><span class="toc-text">Promise的局限性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#练习题"><span class="toc-text">练习题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自己实现一个简单的-Promise"><span class="toc-text">自己实现一个简单的 Promise</span></a></li></ol>
 </div>
     
 </div>
@@ -93,7 +93,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input"/>
-            <span id="begin-search">搜索</span>
+            <span id="begin-search">search</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -117,16 +117,16 @@
     </div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span>2019-07-15 09:05:45</span></span>
+        <span class="attr">Post：<span>2019-07-15 09:05:45</span></span>
         
-        <span class="attr">标签：/
+        <span class="attr">Tags：/
         
-        <a class="tag" href="/tags/#ES6" title="ES6">ES6</a>
+        <a class="tag" href="/tags/#ES6 promise" title="ES6 promise">ES6 promise</a>
         <span>/</span>
         
         
         </span>
-        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
 </span>
 </span>
     </div>
@@ -140,8 +140,33 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timeoutPromise</span>(<span class="params">delay</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>( <span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">        setTimeout( <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            reject( <span class="string">"Timeout!"</span> );</span><br><span class="line">        &#125;, delay );</span><br><span class="line">    &#125; );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Promise</span>.race( [</span><br><span class="line">    foo(),</span><br><span class="line">    timeoutPromise( <span class="number">3000</span> )</span><br><span class="line">] )</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>回调函数有时同步执行，有时异步执行的问题<br>promise.then() 永远是异步执行的，它是微任务<br><a href="https://juejin.im/post/59e85eebf265da430d571f89?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener">宏任务与微任务的概念可以看这篇文章了解</a></p>
+<h2 id="promise-嵌套"><a href="#promise-嵌套" class="headerlink" title="promise 嵌套"></a>promise 嵌套</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([loadSomething(), loadAnotherthing()])</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params">[something, another]</span>) </span>&#123;</span><br><span class="line">    DoSomethingOnThem(...[something, another]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
+<h2 id="断开的-promise-链"><a href="#断开的-promise-链" class="headerlink" title="断开的 promise 链"></a>断开的 promise 链</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">anAsyncCall</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> promise = doSomethingAsync();</span><br><span class="line">    <span class="keyword">return</span> promise.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        somethingComplicated()</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="混乱的集合"><a href="#混乱的集合" class="headerlink" title="混乱的集合"></a>混乱的集合</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bad</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">workMyCollection</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> resultArr = [];</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">_recursive</span>(<span class="params">idx</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (idx &gt;= resultArr.length) <span class="keyword">return</span> resultArr;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> doSomethingAsync(arr[idx]).then(<span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">            resultArr.push(res);</span><br><span class="line">            <span class="keyword">return</span> _recursive(idx + <span class="number">1</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> _recursive(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>你可以写成  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">workMyCollection</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.all(arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> doSomethingAsync(item);</span><br><span class="line">    &#125;));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="捕获错误的两种方式"><a href="#捕获错误的两种方式" class="headerlink" title="捕获错误的两种方式"></a>捕获错误的两种方式</h2><ul>
+<li><p>catch(cb)  </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">somethingAsync()</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> somethingElseAsync();</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    handleMyError(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>then(null,cb)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">somethingAsync</span><br><span class="line">.then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> somethingElseAsync()</span><br><span class="line">&#125;)</span><br><span class="line">.then(<span class="literal">null</span>, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">    handleMyError(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Promise的局限性"><a href="#Promise的局限性" class="headerlink" title="Promise的局限性"></a>Promise的局限性</h2><p><strong>（1） 错误被吃掉</strong><br>Promise 内部的错误不会影响到 Promise 外部的代码，而这种情况我们就通常称为 “吃掉错误”。因此promise链中的错误很容易被忽略。<br><strong>（2） 只能传递单一值</strong><br>通常使用解构赋值来传递多个值，封装对象或数组，再在then中解封赋值。<br><strong>（3） Promise 一旦新建它就会立即执行，无法中途取消。</strong><br><strong>（4） 无法得知 pending 状态</strong><br>当处于 pending 状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）</p>
+<h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><ul>
+<li>红绿灯问题<br>题目：红灯三秒亮一次，绿灯一秒亮一次，黄灯2秒亮一次；如何让三个灯不断交替重复亮灯？（用 Promise 实现）<h2 id="自己实现一个简单的-Promise"><a href="#自己实现一个简单的-Promise" class="headerlink" title="自己实现一个简单的 Promise"></a>自己实现一个简单的 Promise</h2><a href="https://juejin.im/post/5a30193051882503dc53af3c" target="_blank" rel="noopener">参考文章</a><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Promise2</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> _this = <span class="keyword">this</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 用来保存then传入的回调函数</span></span><br><span class="line">  <span class="keyword">this</span>.callback = <span class="literal">undefined</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">resolve</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">    _this.callback &amp;&amp; _this.callback(val);</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  fn(resolve);</span><br><span class="line">&#125;</span><br><span class="line">Promise2.prototype.then = <span class="function"><span class="keyword">function</span> (<span class="params">cb</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.callback = cb;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">timeout</span>(<span class="params">ms</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Promise2(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">        setTimeout(resolve, ms);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">timeout(<span class="number">3000</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'我3秒后被输出'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><a href="https://github.com/mqyqingfeng/Blog/issues/98" target="_blank" rel="noopener">原博客文章</a></p>
 
         
         <br />
