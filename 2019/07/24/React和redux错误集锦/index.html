@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        React和redux错误集锦 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>鱼玉玉玉</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#react-基础"><span class="toc-text">react 基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装react环境-只安装一次"><span class="toc-text">安装react环境(只安装一次)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建react项目-myapp"><span class="toc-text">创建react项目(myapp)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#jsx语法"><span class="toc-text">jsx语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react页面更新方式"><span class="toc-text">react页面更新方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#props-的只读性"><span class="toc-text">props 的只读性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件创建方式"><span class="toc-text">组件创建方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正确的使用状态"><span class="toc-text">正确的使用状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-里的表单"><span class="toc-text">react 里的表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#状态提升"><span class="toc-text">状态提升</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件间通信"><span class="toc-text">组件间通信</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#redux"><span class="toc-text">redux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PureComponent"><span class="toc-text">PureComponent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#propsTypes"><span class="toc-text">propsTypes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#context"><span class="toc-text">context</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#高阶组件"><span class="toc-text">高阶组件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#react-redux"><span class="toc-text">react-redux</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进阶"><span class="toc-text">进阶</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到的错误"><span class="toc-text">遇到的错误</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        React和redux错误集锦
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-07-24 12:48:28</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#redux" title="redux">redux</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="react-基础"><a href="#react-基础" class="headerlink" title="react 基础"></a>react 基础</h2><h3 id="安装react环境-只安装一次"><a href="#安装react环境-只安装一次" class="headerlink" title="安装react环境(只安装一次)"></a>安装react环境(只安装一次)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn gloabal add create-react-app</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建react项目-myapp"><a href="#创建react项目-myapp" class="headerlink" title="创建react项目(myapp)"></a>创建react项目(myapp)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">create-react-app myapp</span><br><span class="line">cd myapp</span><br><span class="line">yarn start</span><br></pre></td></tr></table></figure>
+
+<h3 id="jsx语法"><a href="#jsx语法" class="headerlink" title="jsx语法"></a>jsx语法</h3><ul>
+<li>在 js 里面引用 html，需要使用<code>()</code>,可以省略，但在 html 里面使用 js，需要使用 mustacle 语法,用<code>{}</code>包起来。</li>
+<li>事件绑定函数如果不写成箭头函数，而是普通函数，需要绑定 this 值。</li>
+<li>最外层只能有一个父级</li>
+<li>jsx 是通过 babel-preset-react 来进行转码的。</li>
+</ul>
+<h3 id="react页面更新方式"><a href="#react页面更新方式" class="headerlink" title="react页面更新方式"></a>react页面更新方式</h3><ul>
+<li>通过 setState 方式，更改 state 状态值，触发页面自动刷新</li>
+</ul>
+<h3 id="props-的只读性"><a href="#props-的只读性" class="headerlink" title="props 的只读性"></a>props 的只读性</h3><p>无论是使用函数或是类来声明一个组件，它决不能修改它自己的props。</p>
+<blockquote>
+<p>需要避免的情况：需要将一个对象中的某属性变更之后赋给另外一个对象。这样传的是引用。</p>
+</blockquote>
+<h3 id="组件创建方式"><a href="#组件创建方式" class="headerlink" title="组件创建方式"></a>组件创建方式</h3><ul>
+<li><p>函数式无状态组件<br>  使用函数定义组件时，没有内部状态，组件内接受的 props 为只读状态，只做数据渲染用。</p>
+</li>
+<li><p>ES6 有状态组件</p>
+<ul>
+<li>具有局部状态：状态是私有的，完全受控于当前的组件</li>
+<li>具有生命周期钩子函数</li>
+</ul>
+</li>
+</ul>
+<h3 id="正确的使用状态"><a href="#正确的使用状态" class="headerlink" title="正确的使用状态"></a>正确的使用状态</h3><p><strong>（1）不要直接更新状态</strong></p>
+<ul>
+<li>构造函数是唯一能够初始化 this.state 的地方。</li>
+<li>通过 setState 更改状态</li>
+</ul>
+<p><strong>（2）状态更新可能是异步的</strong></p>
+<ul>
+<li><p>this.props 和 this.state 可能是异步更新的，你不应该依靠它们的值来计算下一个状态。可以使用下面的方式。</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//错误</span></span><br><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    counter: <span class="keyword">this</span>.state.counter + <span class="keyword">this</span>.props.increment,</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//正确</span></span><br><span class="line"><span class="keyword">this</span>.setState(<span class="function">(<span class="params">prevState, props</span>) =&gt;</span> (&#123;</span><br><span class="line">    counter: prevState.counter + props.increment</span><br><span class="line">&#125;));</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>（3）状态更新合并</strong></p>
+<h3 id="react-里的表单"><a href="#react-里的表单" class="headerlink" title="react 里的表单"></a>react 里的表单</h3><p><strong>（1）受控组件</strong><br><strong>（2）使用ref</strong><br>ref 放到传统 html 元素上，返回该节点，如果放到自己创建的元素上，返回的就是 react 元素对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input ref=&#123;(node)=&gt;&#123;<span class="keyword">this</span>.input = node&#125;&#125;/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这种方式不推荐使用，除非遇到上传那种元素很难拿到的情况。</p>
+<h3 id="状态提升"><a href="#状态提升" class="headerlink" title="状态提升"></a>状态提升</h3><p>遇到几个组件需要共用状态的情况，将状态提升到父组件，子组件通过调用父组件的方法修改状态，该状态通过 props 传递给子组件使用。</p>
+<h3 id="组件间通信"><a href="#组件间通信" class="headerlink" title="组件间通信"></a>组件间通信</h3><p><strong>（1）父组件向子组件通信</strong><br>通过传递 props 的方式，向子组件通信，如果父组件与子组件之间不止一个层级，可以通过扩展运算符<code>...</code>传递给更深层次的组件</p>
+<p><strong>（2）子组件向父组件通讯</strong><br>同样也是通过传递 props 的方式，只不过这里传递的是作用域为父组件的函数,子组件调用该函数，将子组件想要传递的信息，作为参数，传递到父组件的作用域中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父组件中</span></span><br><span class="line">handleDel(ind)&#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(<span class="function"><span class="params">state</span>=&gt;</span>&#123;</span><br><span class="line">        state.date = state.data.splice(ind,<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span> state;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line">    ...</span><br><span class="line">&lt;EduItem key=&#123;ind&#125; index=&#123;ind&#125; </span><br><span class="line">    handleDel=&#123;<span class="keyword">this</span>.handleDel.bind(<span class="keyword">this</span>)&#125;&gt;</span><br><span class="line">&lt;<span class="regexp">/EduItem&gt;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/也可以使用箭头函数，则不需要bind（this）</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/子组件中</span></span><br><span class="line"><span class="regexp"> &#123;this.props.index!==0?</span></span><br><span class="line"><span class="regexp"> &lt;button onClick=&#123;()=&gt;&#123;this.props.handleDel(this.props.index)&#125;&#125;&gt;删除&lt;/</span>button&gt;:</span><br><span class="line"> <span class="literal">null</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）兄弟组件通讯</strong></p>
+<p>对于没有直接关联的组件，需要找到他们公有的父节点，将状态提升到该父节点，再结合前两种方式，进行通信，但这种方法有一个问题，由于父节点的 state 发生变化，会触发该父节点及从属于该节点的子组件的生命周期</p>
+<h2 id="redux"><a href="#redux" class="headerlink" title="redux"></a>redux</h2><p><strong>(1) store</strong></p>
+<p>接受一个函数作为参数，返回一个store对象。这个函数就是一个reducer。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createStore &#125; <span class="keyword">from</span> <span class="string">'redux'</span>;</span><br><span class="line"><span class="keyword">const</span> store = createStore(reducer)</span><br></pre></td></tr></table></figure>
+
+<p><strong>(2) state</strong></p>
+<p>对store生成快照，获得当前时刻的状态。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> state = store.getState()</span><br></pre></td></tr></table></figure>
+
+<p><strong>(2) action</strong></p>
+<p>action 是一个对象，是 View 发出的通知，表示 state 要发生变化了。改变state的唯一方法，就是使用action，他会运送数据到store</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> action =&#123;</span><br><span class="line">    type:<span class="string">"ADD_TODO"</span>,<span class="comment">//action的类型</span></span><br><span class="line">    payload:<span class="string">"hello world"</span> <span class="comment">//携带的信息</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>(3) Action Creator</strong></p>
+<p>定义的用来生成action的函数</p>
+<p><strong>(4) dispatch</strong></p>
+<p>发出action的唯一方式，接受一个action对象作为参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store.dispatch(action);</span><br></pre></td></tr></table></figure>
+
+<p><strong>(5) reducer</strong></p>
+<p>store 接受到新的 action 之后，如何才能更新 View 呢，通过返回新的 state，这个state的计算过程就叫做 reducer，reducer是一个函数，他接受当前 state 和一个 action 为参数，返回新的 state。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> defaultState = <span class="number">0</span>;</span><br><span class="line"><span class="comment">//整个应用的初始状态可作为state的默认值</span></span><br><span class="line"><span class="keyword">const</span> reducer = <span class="function">(<span class="params">state = defaultState, action</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="string">'ADD'</span>:</span><br><span class="line">      <span class="keyword">return</span> state + action.payload;</span><br><span class="line">    <span class="keyword">default</span>: </span><br><span class="line">      <span class="keyword">return</span> state;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//这个state就是新的state</span></span><br><span class="line"><span class="keyword">const</span> state = reducer(<span class="number">1</span>, &#123;</span><br><span class="line">  type: <span class="string">'ADD'</span>,</span><br><span class="line">  payload: <span class="number">2</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>Reducer 函数里面不能改变 State，必须返回一个全新的对象，必须是一个纯函数，可以参照以下写法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">reducer</span>(<span class="params">state, action</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.assign(&#123;&#125;, state, &#123; thingToChange &#125;);</span><br><span class="line">    <span class="comment">// 或者</span></span><br><span class="line">    <span class="keyword">return</span> &#123; ...state, ...newState &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// State 是一个数组</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">reducer</span>(<span class="params">state, action</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> [...state, newItem];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：</p>
+<ul>
+<li>修改传入参数</li>
+<li>执行有副作用的操作，如 API 请求和路由跳转；</li>
+<li>调用非纯函数，如 Date.now() 或 Math.random()</li>
+</ul>
+</blockquote>
+<h3 id="PureComponent"><a href="#PureComponent" class="headerlink" title="PureComponent"></a>PureComponent</h3><p>新旧值一样，就不会刷新页面，提高性能，但只是浅比较，如果需要传入的 <em>props</em> 或者 <em>state</em> 是引用值，要引起更新必须是新的引用。</p>
+<h3 id="propsTypes"><a href="#propsTypes" class="headerlink" title="propsTypes"></a>propsTypes</h3><h3 id="context"><a href="#context" class="headerlink" title="context"></a>context</h3><p>共享对于组件树来说是“全局”的数据，例如当前认证的用户、主题或首选语言，避免通过组件层层传递 <em>props</em></p>
+<p><strong>API</strong></p>
+<ul>
+<li><strong>React.createContext</strong></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// context.js</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="comment">// 默认主题是Light</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> &#123; Provider, Consumer &#125; = React.createContext(<span class="string">"Light"</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><strong>Context.Provider</strong></p>
+<p>  Provider是需要使用Context的所有组件的根组件。它接受一个value作为props，它表示Context传递的值，它会修改你在创建Context时候设定的默认值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'./App.css'</span>;</span><br><span class="line"><span class="keyword">import</span> Father <span class="keyword">from</span> <span class="string">'./components/Father.js'</span></span><br><span class="line"><span class="keyword">import</span> &#123;Provider&#125; <span class="keyword">from</span> <span class="string">"./context"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    </span><br><span class="line">    &lt;div className=<span class="string">"App"</span>&gt;</span><br><span class="line">      &lt;Provider value=<span class="string">"dark"</span>&gt;</span><br><span class="line">        &lt;Father&gt;&lt;/Father&gt;</span><br><span class="line">      &lt;<span class="regexp">/Provider&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Context.Consumer</strong></p>
+<p>  Consumer 表示消费者,它接受一个 render props 作为唯一的 children 。其实就是一个函数，这个函数会接收到 Context 传递的数据作为参数，并且需要返回一个组件。</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123; Consumer &#125; <span class="keyword">from</span> <span class="string">'../context'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Father</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;Consumer&gt;</span><br><span class="line">        &#123;</span><br><span class="line">          theme=&gt;&lt;div&gt;this theme is &#123;theme&#125;&lt;/div&gt;</span><br><span class="line">        &#125;</span><br><span class="line">      &lt;<span class="regexp">/Consumer&gt;</span></span><br><span class="line"><span class="regexp">      </span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/this theme is dark</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Class.contextType</li>
+</ul>
+<p>挂载在 class 上的 contextType 属性被重赋值为一个由 React.createContext() 创建的 Context 对象。这能让你使用 this.context 来使用最近 Context 上的那个值。==你可以在任何生命周期中访问到它，包括 render 函数中。==</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123; Consumer&#125; <span class="keyword">from</span> <span class="string">'../context'</span></span><br><span class="line"><span class="comment">// const myContext = React.createContext("green");</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">Father</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;Consumer&gt;</span><br><span class="line">        &#123;</span><br><span class="line">          theme=&gt;&lt;div&gt;this theme is &#123;theme&#125;,this background is &#123;this.context&#125;&lt;/div&gt;</span><br><span class="line">        &#125;</span><br><span class="line">      &lt;<span class="regexp">/Consumer&gt;</span></span><br><span class="line"><span class="regexp">      </span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/this theme is dark,this background is green</span></span><br><span class="line"><span class="regexp">const myContext = React.createContext("green");</span></span><br><span class="line"><span class="regexp">Father.contextType = myContext;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="高阶组件"><a href="#高阶组件" class="headerlink" title="高阶组件"></a>高阶组件</h3><p>高阶组件是一个==函数==，不是一个组件</p>
+<blockquote>
+<ul>
+<li>不要在高阶组件中直接修改传入组件，容易产生耦合</li>
+<li>最大化使用组合</li>
+<li>不要在render中使用高阶组件</li>
+<li>高阶组件不能传递refs</li>
+</ul>
+</blockquote>
+<h2 id="react-redux"><a href="#react-redux" class="headerlink" title="react-redux"></a>react-redux</h2><h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶"></a>进阶</h2><h2 id="遇到的错误"><a href="#遇到的错误" class="headerlink" title="遇到的错误"></a>遇到的错误</h2>
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = ""
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
