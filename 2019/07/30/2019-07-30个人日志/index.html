@@ -82,7 +82,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Promise"><span class="toc-text">Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS技巧"><span class="toc-text">JS技巧</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#待办"><span class="toc-text">待办</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promise"><span class="toc-text">Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS技巧"><span class="toc-text">JS技巧</span></a></li></ol>
 </div>
     
 </div>
@@ -125,7 +125,10 @@
 </span>
     </div>
     <div class="post-content ">
-        <h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><ul>
+        <h3 id="待办"><a href="#待办" class="headerlink" title="待办"></a>待办</h3><ul>
+<li><input disabled type="checkbox"> 一个数组像另一个数组转移元素</li>
+</ul>
+<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><ul>
 <li><p>.then 或者 .catch 的参数期望是函数，传入非函数则会发生值穿透。</p>
 </li>
 <li><p>.then 或 .catch 返回的值不能是 promise 本身，否则会造成死循环。</p>
@@ -151,7 +154,9 @@
 <li><p>用解构赋值获取嵌套对象的属性</p>
   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过解构赋值获取嵌套对象的值</span></span><br><span class="line"><span class="keyword">const</span> car = &#123;</span><br><span class="line">    model: <span class="string">'bmw 2018'</span>,</span><br><span class="line">    engine: &#123;</span><br><span class="line">        v6: <span class="literal">true</span>,</span><br><span class="line">        turbo: <span class="literal">true</span>,</span><br><span class="line">        vin: <span class="number">12345</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 这里使用 ES6 中的简单写法，使用 &#123; vin &#125; 替代 &#123;   vin: vin &#125;</span></span><br><span class="line"><span class="keyword">const</span> modalAndVIN = <span class="function">(<span class="params">&#123; model, engine: &#123; vin &#125;&#125;</span>)     =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`model: <span class="subst">$&#123;model&#125;</span>, vin: <span class="subst">$&#123;vin&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">modalAndVIN(car);</span><br><span class="line"><span class="comment">// "model: bmw 2018, vin: 12345"</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>扩展</p>
+<li><p>扩展运算符合并对象</p>
+</li>
+<li><p>使用===代替==，使用Object.is()代替===<br>  <img src="https://user-gold-cdn.xitu.io/2018/8/22/16561e1289dabef4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="三者对比图"></p>
 </li>
 </ul>
 
