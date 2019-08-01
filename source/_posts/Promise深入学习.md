@@ -1,7 +1,9 @@
 ---
 title: ES6-Promise深入学习和Generator自动执行
 date: 2019-07-15 09:05:45
-tags: ES6 promise
+tags:
+    - ES6 
+    - promise
 ---
 ## Promise
 ### Promise 用途

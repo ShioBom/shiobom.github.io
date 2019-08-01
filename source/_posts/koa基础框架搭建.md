@@ -1,7 +1,9 @@
 ---
 title: koa基础框架搭建
 date: 2019-07-15 12:41:51
-tags: Node.js Koa
+tags: 
+  - Node.js 
+  - Koa
 ---
 ## 创建项目
 创建一个项目目录，然后快速生成一个 package.json 文件
