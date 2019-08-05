@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        代码规范和UED页面规范 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>鱼玉玉玉</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码规范"><span class="toc-text">代码规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#头注释"><span class="toc-text">头注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件注释"><span class="toc-text">组件注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件注释"><span class="toc-text">文件注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命名规范"><span class="toc-text">命名规范</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码解构规范"><span class="toc-text">代码解构规范</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UED页面规范"><span class="toc-text">UED页面规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单行注释空一格"><span class="toc-text">单行注释空一格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模块功能描述说明"><span class="toc-text">模块功能描述说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单个函数注释"><span class="toc-text">单个函数注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目根目录文件详解"><span class="toc-text">项目根目录文件详解</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        代码规范和UED页面规范
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2019-08-01 16:08:04</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#代码规范" title="代码规范">代码规范</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h2><h3 id="头注释"><a href="#头注释" class="headerlink" title="头注释"></a>头注释</h3><h3 id="组件注释"><a href="#组件注释" class="headerlink" title="组件注释"></a>组件注释</h3><h3 id="文件注释"><a href="#文件注释" class="headerlink" title="文件注释"></a>文件注释</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * 作用于哪些页面</span></span><br><span class="line"><span class="comment"> * 注明代码业务/功能说明</span></span><br><span class="line"><span class="comment"> * @authors Your Name (you@example.org)</span></span><br><span class="line"><span class="comment"> * @date    2016-05-16</span></span><br><span class="line"><span class="comment"> * @version $Id$</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h3><h3 id="代码解构规范"><a href="#代码解构规范" class="headerlink" title="代码解构规范"></a>代码解构规范</h3><h2 id="UED页面规范"><a href="#UED页面规范" class="headerlink" title="UED页面规范"></a>UED页面规范</h2><h2 id="单行注释空一格"><a href="#单行注释空一格" class="headerlink" title="单行注释空一格"></a>单行注释空一格</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是注释</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="模块功能描述说明"><a href="#模块功能描述说明" class="headerlink" title="模块功能描述说明"></a>模块功能描述说明</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ------------------------------------------------------------------</span></span><br><span class="line"><span class="comment"> * 模块描述说明</span></span><br><span class="line"><span class="comment"> * ------------------------------------------------------------------</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="单个函数注释"><a href="#单个函数注释" class="headerlink" title="单个函数注释"></a>单个函数注释</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 函数功能简述</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 具体描述一些细节</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * @param    &#123;string&#125;  address     地址</span></span><br><span class="line"><span class="comment"> * @param    &#123;array&#125;   com         商品数组</span></span><br><span class="line"><span class="comment"> * @param    &#123;string&#125;  pay_status  支付方式</span></span><br><span class="line"><span class="comment"> * @returns  void</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * @date     2014-04-12</span></span><br><span class="line"><span class="comment"> * @author   QETHAN&lt;qinbinyang@zuijiao.net&gt;</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="项目根目录文件详解"><a href="#项目根目录文件详解" class="headerlink" title="项目根目录文件详解"></a>项目根目录文件详解</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">|——src</span><br><span class="line">    |——assets     静态资源</span><br><span class="line">    |——components 公共组件</span><br><span class="line">    |——layouts    公共布局</span><br><span class="line">    |——models     dva封装的状态树</span><br><span class="line">    |——routes     页面</span><br><span class="line">    |——service    所有与请求接口的代码</span><br><span class="line">    |——utils      公共方法</span><br><span class="line">    index.js      入口文件</span><br><span class="line">    index.less    入口样式文件</span><br><span class="line">    router.js     路由文件</span><br></pre></td></tr></table></figure>
+
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/ShioBom">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

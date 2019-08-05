@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#07-11-个人总结"><span class="toc-text">07-11 个人总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ES6"><span class="toc-text">ES6</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Array"><span class="toc-text">Array</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#find-callback-ele-index-arr"><span class="toc-text">find(callback(ele,index,arr))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#findIndex-callback-ele-index-arr"><span class="toc-text">findIndex(callback(ele,index,arr))</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#entries-keys-values"><span class="toc-text">entries(),keys(),values()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解构赋值"><span class="toc-text">解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的结构赋值"><span class="toc-text">数组的结构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对象的解构赋值"><span class="toc-text">对象的解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字符串的解构赋值"><span class="toc-text">字符串的解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数参数的解构赋值"><span class="toc-text">函数参数的解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解构赋值的用处"><span class="toc-text">解构赋值的用处</span></a></li></ol></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Array"><span class="toc-text">Array</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#find-callback-ele-index-arr"><span class="toc-text">find(callback(ele,index,arr))</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#findIndex-callback-ele-index-arr"><span class="toc-text">findIndex(callback(ele,index,arr))</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#entries-keys-values"><span class="toc-text">entries(),keys(),values()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解构赋值"><span class="toc-text">解构赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的结构赋值"><span class="toc-text">数组的结构赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对象的解构赋值"><span class="toc-text">对象的解构赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串的解构赋值"><span class="toc-text">字符串的解构赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数参数的解构赋值"><span class="toc-text">函数参数的解构赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解构赋值的用处"><span class="toc-text">解构赋值的用处</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#装饰器"><span class="toc-text">装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#装饰类"><span class="toc-text">装饰类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#装饰类的属性"><span class="toc-text">装饰类的属性</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -138,7 +138,7 @@
 </span>
     </div>
     <div class="post-content ">
-        <h1 id="07-11-个人总结"><a href="#07-11-个人总结" class="headerlink" title="07-11 个人总结"></a>07-11 个人总结</h1><h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><h3 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h3><h4 id="find-callback-ele-index-arr"><a href="#find-callback-ele-index-arr" class="headerlink" title="find(callback(ele,index,arr))"></a>find(callback(ele,index,arr))</h4><p>find 方法对数组中的每一项元素执行一次 callback 函数,直至某个 callback 返回 true ,立即返回该元素的值</p>
+        <h2 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h2><h3 id="find-callback-ele-index-arr"><a href="#find-callback-ele-index-arr" class="headerlink" title="find(callback(ele,index,arr))"></a>find(callback(ele,index,arr))</h3><p>find 方法对数组中的每一项元素执行一次 callback 函数,直至某个 callback 返回 true ,立即返回该元素的值</p>
 <ul>
 <li><code>ele</code>:当前遍历到的元素</li>
 <li><code>index</code>:当前索引</li>
@@ -146,33 +146,40 @@
 <li><code>返回值</code>:返回==第一个==满足条件的元素,若没有满足条件的值,返回 undefined<blockquote>
 <p>find()方法不会改变原数组</p>
 </blockquote>
-<h4 id="findIndex-callback-ele-index-arr"><a href="#findIndex-callback-ele-index-arr" class="headerlink" title="findIndex(callback(ele,index,arr))"></a>findIndex(callback(ele,index,arr))</h4>findIndex 方法对数组中的每个数组索引执行一次 callback 函数，直到找到一个 callback 函数返回 true 。如果找到这样的元素，findIndex 会立即返回该元素的索引。</li>
+</li>
+</ul>
+<h3 id="findIndex-callback-ele-index-arr"><a href="#findIndex-callback-ele-index-arr" class="headerlink" title="findIndex(callback(ele,index,arr))"></a>findIndex(callback(ele,index,arr))</h3><p>findIndex 方法对数组中的每个数组索引执行一次 callback 函数，直到找到一个 callback 函数返回 true 。如果找到这样的元素，findIndex 会立即返回该元素的索引。</p>
+<ul>
 <li><code>ele</code>:当前遍历到的元素</li>
 <li><code>index</code>:当前索引</li>
 <li><code>arr</code>:调用findIndex的数组本身</li>
 <li><code>返回值</code>:返回==第一个==满足条件的元素的索引值,若没有满足条件的元素,返回-1<blockquote>
 <p>findIndex不会修改所调用的数组。</p>
 </blockquote>
-<h4 id="entries-keys-values"><a href="#entries-keys-values" class="headerlink" title="entries(),keys(),values()"></a>entries(),keys(),values()</h4>以上三种方法均用于遍历数组,返回的都是一个遍历器对象,只是keys()是对键名的遍历,values()是对键值得遍历,entries()是对整个键值对的遍历。</li>
+</li>
+</ul>
+<h3 id="entries-keys-values"><a href="#entries-keys-values" class="headerlink" title="entries(),keys(),values()"></a>entries(),keys(),values()</h3><p>以上三种方法均用于遍历数组,返回的都是一个遍历器对象,只是keys()是对键名的遍历,values()是对键值得遍历,entries()是对整个键值对的遍历。</p>
+<ul>
 <li><code>遍历方式</code>:<ul>
 <li>next() :返回一个对象,value属性指迭代器中的元素,done指示迭代是否完成</li>
-<li>for…of : 循环遍历<br>通过下面的实例来了解<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [&#123;<span class="attr">name</span>: <span class="string">"juli"</span>,<span class="attr">pwd</span>: <span class="string">"123"</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">"julia"</span>,<span class="attr">pwd</span>: <span class="string">"456"</span>&#125;]</span><br><span class="line"><span class="built_in">console</span>.log(arr.entries().next()); </span><br><span class="line"><span class="comment">//&#123; value: [ 0, &#123; name: 'juli', pwd: '123' &#125; ], done: false &#125;</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> iterator <span class="keyword">of</span> arr.entries()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(iterator); </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//[ 0, &#123; name: 'juli', pwd: '123' &#125; ]</span></span><br><span class="line"><span class="comment">//[ 1, &#123; name: 'julia', pwd: '456' &#125; ]</span></span><br></pre></td></tr></table></figure>
+<li>for…of : 循环遍历<br>通过下面的实例来了解</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [&#123;<span class="attr">name</span>: <span class="string">"juli"</span>,<span class="attr">pwd</span>: <span class="string">"123"</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">"julia"</span>,<span class="attr">pwd</span>: <span class="string">"456"</span>&#125;]</span><br><span class="line"><span class="built_in">console</span>.log(arr.entries().next()); </span><br><span class="line"><span class="comment">//&#123; value: [ 0, &#123; name: 'juli', pwd: '123' &#125; ], done: false &#125;</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> iterator <span class="keyword">of</span> arr.entries()) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(iterator); </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//[ 0, &#123; name: 'juli', pwd: '123' &#125; ]</span></span><br><span class="line"><span class="comment">//[ 1, &#123; name: 'julia', pwd: '456' &#125; ]</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><h3 id="数组的结构赋值"><a href="#数组的结构赋值" class="headerlink" title="数组的结构赋值"></a>数组的结构赋值</h3><ol>
+<li><p>如果解构不成功,变量的值等于 undefined ;</p>
 </li>
-</ul>
-</li>
-</ul>
-<h3 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h3><h4 id="数组的结构赋值"><a href="#数组的结构赋值" class="headerlink" title="数组的结构赋值"></a>数组的结构赋值</h4><ol>
-<li>如果解构不成功,变量的值等于 undefined ;</li>
-<li>解构赋值允许指定默认值,但 只有当一个数组成员严格等于undefined,默认值才会生效</li>
-</ol>
+<li><p>解构赋值允许指定默认值,但 只有当一个数组成员严格等于undefined,默认值才会生效</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [x=f()]=[<span class="number">1</span>];  <span class="comment">//函数 f()不会执行</span></span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>默认值可以引用结构赋值的其他变量,但必须是已经定义了的</li>
-<li>属性是有次序的,和值一一对应</li>
+</li>
+<li><p>默认值可以引用结构赋值的其他变量,但必须是已经定义了的</p>
+</li>
+<li><p>属性是有次序的,和值一一对应</p>
+</li>
 </ol>
-<h4 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h4><ol>
+<h3 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h3><ol>
 <li>属性没有次序</li>
 <li>变量必须与对象的属性同名,才能取到值</li>
 <li>对象的解构赋值,可以方便地将现有对象的方法,赋值到某个变量</li>
@@ -180,20 +187,20 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;log,sin,cos&#125; = <span class="built_in">Math</span>;</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
-<li><p>对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者</p>
+<li>对象的解构赋值的内部机制，是先找到同名属性，然后再赋给对应的变量。真正被赋值的是后者，而不是前者</li>
+</ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; <span class="attr">foo</span>: baz &#125; = &#123; <span class="attr">foo</span>: <span class="string">"aaa"</span>, <span class="attr">bar</span>: <span class="string">"bbb"</span> &#125;;</span><br><span class="line">bar <span class="comment">// "aaa"</span></span><br><span class="line">foo <span class="comment">// error: foo is not defined</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果解构不成功,变量的值等于undefined;</p>
-</li>
-<li><p>也可以用来指定默认值</p>
-</li>
-</ol>
-<h4 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a>字符串的解构赋值</h4><ol>
-<li>字符串也可以解构赋值。这是因为此时，字符串被转换成了一个类似数组的对象。<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, c, d, e] = <span class="string">'hello'</span>;</span><br><span class="line">a <span class="comment">// "h"</span></span><br><span class="line">b <span class="comment">// "e"</span></span><br><span class="line">c <span class="comment">// "l"</span></span><br><span class="line">d <span class="comment">// "l"</span></span><br><span class="line">e <span class="comment">// "o"</span></span><br></pre></td></tr></table></figure>
 
-</li>
+<ol start="5">
+<li>如果解构不成功,变量的值等于undefined;</li>
+<li>也可以用来指定默认值</li>
 </ol>
-<h4 id="函数参数的解构赋值"><a href="#函数参数的解构赋值" class="headerlink" title="函数参数的解构赋值"></a>函数参数的解构赋值</h4><ol>
+<h3 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a>字符串的解构赋值</h3><ol>
+<li>字符串也可以解构赋值。这是因为此时，字符串被转换成了一个类似数组的对象。</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [a, b, c, d, e] = <span class="string">'hello'</span>;</span><br><span class="line">a <span class="comment">// "h"</span></span><br><span class="line">b <span class="comment">// "e"</span></span><br><span class="line">c <span class="comment">// "l"</span></span><br><span class="line">d <span class="comment">// "l"</span></span><br><span class="line">e <span class="comment">// "o"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数参数的解构赋值"><a href="#函数参数的解构赋值" class="headerlink" title="函数参数的解构赋值"></a>函数参数的解构赋值</h3><ol>
 <li>函数参数的解构也可以使用默认值。</li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">move</span>(<span class="params">&#123;x = <span class="number">0</span>, y = <span class="number">0</span>&#125; = &#123;&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> [x, y];</span><br><span class="line">&#125;</span><br><span class="line">move(&#123;<span class="attr">x</span>: <span class="number">3</span>, <span class="attr">y</span>: <span class="number">8</span>&#125;); <span class="comment">// [3, 8]</span></span><br><span class="line">move(&#123;<span class="attr">x</span>: <span class="number">3</span>&#125;); <span class="comment">// [3, 0]</span></span><br><span class="line">move(&#123;&#125;); <span class="comment">// [0, 0]</span></span><br><span class="line">move(); <span class="comment">// [0, 0]</span></span><br></pre></td></tr></table></figure>
@@ -203,24 +210,42 @@
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">&#123;x, y = <span class="number">5</span>&#125;</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(x, y);</span><br><span class="line">&#125;</span><br><span class="line">foo(&#123;&#125;) <span class="comment">// undefined 5</span></span><br><span class="line">foo(&#123;<span class="attr">x</span>: <span class="number">1</span>&#125;) <span class="comment">// 1 5</span></span><br><span class="line">foo(&#123;<span class="attr">x</span>: <span class="number">1</span>, <span class="attr">y</span>: <span class="number">2</span>&#125;) <span class="comment">// 1 2</span></span><br><span class="line">foo() <span class="comment">// TypeError: Cannot read property 'x' of undefined</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="解构赋值的用处"><a href="#解构赋值的用处" class="headerlink" title="解构赋值的用处"></a>解构赋值的用处</h4><ul>
-<li><p>交换变量的值</p>
+<h3 id="解构赋值的用处"><a href="#解构赋值的用处" class="headerlink" title="解构赋值的用处"></a>解构赋值的用处</h3><ul>
+<li>交换变量的值</li>
+</ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x=<span class="number">1</span>,y=<span class="number">2</span>;</span><br><span class="line">[x,y]=[<span class="number">2</span>,<span class="number">1</span>];</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>取出从函数中返回的多个值</p>
-</li>
-<li><p>函数参数的定义</p>
-</li>
-<li><p>提取 json 数据</p>
-</li>
-<li><p>函数参数的默认值</p>
-</li>
-<li><p>遍历 Map 结构</p>
-<blockquote>
+
+<ul>
+<li>取出从函数中返回的多个值</li>
+<li>函数参数的定义</li>
+<li>提取 json 数据</li>
+<li>函数参数的默认值</li>
+<li>遍历 Map 结构<blockquote>
 <p>解构赋值的规则是，只要等号右边的值不是对象或数组，就先将其转为对象。由于 undefined 和 null 无法转为对象，所以对它们进行解构赋值，都会报错。</p>
 </blockquote>
 </li>
 </ul>
+<h2 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h2><p>装饰器就是一个函数，能装饰类，为类添加新的静态属性或实例属性，也可以装饰类的属性</p>
+<h3 id="装饰类"><a href="#装饰类" class="headerlink" title="装饰类"></a>装饰类</h3><ul>
+<li><strong>添加静态属性</strong></li>
+</ul>
+<ul>
+<li><p><strong>添加实例属性</strong></p>
+</li>
+<li><p>通过目标类的prototype添加</p>
+</li>
+<li><p>通过装饰器mixins添加</p>
+</li>
+<li><p><strong>实际应用</strong></p>
+</li>
+</ul>
+<p>普通情况react结合redux的写法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(mapStateToProps,mapDispatchToProps)(MyComponent)</span><br></pre></td></tr></table></figure>
+
+<p>使用装饰器的写法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@connect(mapStateToProps,mapDispatchToProps)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="装饰类的属性"><a href="#装饰类的属性" class="headerlink" title="装饰类的属性"></a>装饰类的属性</h3><p>待学习</p>
 
         
         <br />
