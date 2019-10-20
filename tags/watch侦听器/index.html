@@ -44,7 +44,7 @@
         
 <div class="nav" id="nav">
     <div class="avatar-name">
-        <div class="avatar ">
+        <div class="avatar radius">
             <img src="/img/avatar.jpeg" />
         </div>
         <div class="name">
@@ -56,25 +56,32 @@
             <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>HOME</span>
+                    <span>主页</span>
                 </a>
             </li>
             <li  class=active >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>TAGS</span>
+                    <span>标签</span>
                 </a>
             </li>
             <li >
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>ARCHIVES</span>
+                    <span>存档</span>
                 </a>
             </li>
             <li >
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>ABOUT</span>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
                 </a>
             </li>
             
@@ -89,7 +96,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input"/>
-            <span id="begin-search">search</span>
+            <span id="begin-search">搜索</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -122,11 +129,161 @@
         <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
         </li> -->
         <li >
+            <span>10-20</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/10/20/TypeScript学习-TS基础/">
+                        <span>
+                            TypeScript学习-TS基础
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>10-20</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/10/20/关于CSS的border-image/">
+                        <span>
+                            关于CSS的border-image
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>10-20</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/10/20/聊一聊移动端适配/">
+                        <span>
+                            聊一聊移动端适配
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>10-20</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/10/20/vue学习笔记三/">
+                        <span>
+                            vue学习笔记三
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>08-28</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/08/28/Stylus学习/">
+                        <span>
+                            Stylus学习
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>08-09</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/08/09/vue学习笔记二/">
+                        <span>
+                            vue学习笔记(二)
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>08-08</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/08/08/vue学习笔记(一)/">
+                        <span>
+                            vue学习笔记
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>08-05</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/08/05/React-setState使用中需要注意的地方/">
+                        <span>
+                            React.setState使用中需要注意的地方
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>08-05</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/08/05/提高开发效率的技巧/">
+                        <span>
+                            提高开发效率的技巧
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
+            <span>08-01</span>
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+            <a href="/2019/08/01/代码规范/">
+                        <span>
+                            代码规范和UED页面规范
+                        </span>
+            </a>
+            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+        </li>
+        
+        <!-- <li class="listing-item">
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li> -->
+        <li >
             <span>07-30</span>
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             <a href="/2019/07/30/2019-07-30个人日志/">
                         <span>
-                            2019-07-30个人日志
+                            月任务汇总
                         </span>
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -141,7 +298,7 @@
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             <a href="/2019/07/29/前端好文集锦/">
                         <span>
-                            前端好文集锦
+                            前端博客集锦
                         </span>
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -214,39 +371,9 @@
         <li >
             <span>07-15</span>
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2019/07/15/cheerio/">
-                        <span>
-                            Node.js 使用cheerio抓取网页数据
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>07-15</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
             <a href="/2019/07/15/koa基础框架搭建/">
                         <span>
                             koa基础框架搭建
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>07-15</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2019/07/15/ES6学习笔记3/">
-                        <span>
-                            ES6学习笔记3
                         </span>
             </a>
             <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -332,6 +459,14 @@
         
 
         
+        <li>
+            <a target="_blank"  href="https://github.com/ShioBom">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
 
         
 
@@ -354,7 +489,7 @@
 
 <script>
     // We expose some of the variables needed by the front end
-    window.hexo_search_path = ""
+    window.hexo_search_path = "search.json"
     window.hexo_root = "/"
     window.isPost = false
 </script>

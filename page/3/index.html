@@ -11,7 +11,7 @@
 
     <title>
         
-        ES6学习笔记3 - undefined
+        
         
     </title>
 
@@ -44,7 +44,7 @@
         
 <div class="nav" id="nav">
     <div class="avatar-name">
-        <div class="avatar ">
+        <div class="avatar radius">
             <img src="/img/avatar.jpeg" />
         </div>
         <div class="name">
@@ -53,37 +53,40 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li >
+            <li  class=active >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>HOME</span>
+                    <span>主页</span>
                 </a>
             </li>
             <li >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>TAGS</span>
+                    <span>标签</span>
                 </a>
             </li>
             <li >
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>ARCHIVES</span>
+                    <span>存档</span>
                 </a>
             </li>
             <li >
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>ABOUT</span>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
                 </a>
             </li>
             
         </ul>
     </div>
-    
-        <div id="toc" class="toc-article">
-    
-</div>
     
 </div>
 
@@ -93,7 +96,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input"/>
-            <span id="begin-search">search</span>
+            <span id="begin-search">搜索</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -109,40 +112,40 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-
-
-<div class="post-container">
-    <div class="post-title">
-        ES6学习笔记3
-    </div>
-
-    <div class="post-meta">
-        <span class="attr">Post：<span>2019-07-15 10:24:43</span></span>
-        
-        <span class="attr">Tags：/
-        
-        <a class="tag" href="/tags/#Unicode  模板字符串  rest参数  扩展运算符  proxy  async" title="Unicode  模板字符串  rest参数  扩展运算符  proxy  async">Unicode  模板字符串  rest参数  扩展运算符  proxy  async</a>
-        <span>/</span>
-        
-        
-        </span>
-        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
-</span>
-</span>
-    </div>
-    <div class="post-content ">
-        
-        
-        <br />
-        <div id="comment-container">
+<div class="post-preview-container" style="min-height: 720px">
+    
+    <div class="post-preview">
+        <div class="post-time">2019-07-10</div>
+        <div class="post-info">
+            <a href="/2019/07/10/搭建个人博客/">
+                <h3>
+                    搭建个人博客
+                </h3>
+            </a>
+            <p>
+                
+                <span>/</span>
+                
+                <a class="tag" href="/tags/#ES6" title="ES6">ES6</a>
+                <span>/</span>
+                
+                <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
+                <span>/</span>
+                
+                
+            </p>
         </div>
-        <div id="disqus_thread"></div>
-
-        <div id="lv-container">
-        </div>
-
     </div>
+    
 </div>
+<ul class="pager">
+    
+    <li class="previous">
+        <a href="/page/2/">&larr; Newer Posts</a>
+    </li>
+    
+    
+</ul>
 
     </div>
 </div>
@@ -157,6 +160,14 @@
 
         
 
+        
+        <li>
+            <a target="_blank"  href="https://github.com/ShioBom">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
         
 
         
@@ -180,9 +191,9 @@
 
 <script>
     // We expose some of the variables needed by the front end
-    window.hexo_search_path = ""
+    window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = true
+    window.isPost = false
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>

@@ -11,7 +11,7 @@
 
     <title>
         
-        Node.js 使用cheerio抓取网页数据 - undefined
+        React.setState使用中需要注意的地方 - undefined
         
     </title>
 
@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#不要滥用setState"><span class="toc-text">不要滥用setState</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#setState并不保证同步，但在某些情况下是同步的。"><span class="toc-text">setState并不保证同步，但在某些情况下是同步的。</span></a></li></ol>
 </div>
     
 </div>
@@ -120,11 +120,20 @@
 
 <div class="post-container">
     <div class="post-title">
-        Node.js 使用cheerio抓取网页数据
+        React.setState使用中需要注意的地方
     </div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span>2019-07-15 16:41:26</span></span>
+        <span class="attr">发布于：<span>2019-08-05 15:29:50</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#react" title="react">react</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#setState" title="setState">setState</a>
+        <span>/</span>
+        
         
         </span>
         <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
@@ -132,7 +141,34 @@
 </span>
     </div>
     <div class="post-content ">
-        
+        <h2 id="不要滥用setState"><a href="#不要滥用setState" class="headerlink" title="不要滥用setState"></a>不要滥用setState</h2><p>由于setState每调用一次，就会触发页面的重新渲染。所以在使用过程中需要注意以下几点。</p>
+<ol>
+<li><p><strong>与渲染无关的状态尽量不要放在state中来管理</strong></p>
+<p> 这样就能保证setState改变的状态都是和渲染有关的状态，就能避免不必要的重复渲染。你可以用React performance tools中的printWasted来查看什么时候会发生不必要渲染</p>
+</li>
+<li><p><strong>避免不必要的修改</strong><br> 当state的值没有发生改变的时候，尽量不要使用setState。虽然shouldComponentUpdate和PureComponent可以避免不必要的重复渲染，但是还是增加了一层shallowEqual的调用，造成多余的浪费。</p>
+</li>
+<li><p><strong>并不是所有的组件状态都应该用setState来进行保存和更新的</strong><br> 复杂的组件可能会有各种各样的状态需要管理。用setState来管理这些状态不但会造成很多不需要的重新渲染，也会造成相关的生命周期钩子一直被调用</p>
+</li>
+</ol>
+<h2 id="setState并不保证同步，但在某些情况下是同步的。"><a href="#setState并不保证同步，但在某些情况下是同步的。" class="headerlink" title="setState并不保证同步，但在某些情况下是同步的。"></a>setState并不保证同步，但在某些情况下是同步的。</h2><ol>
+<li><p><strong>如果需要在setState后直接获取修改后的值</strong></p>
+<ul>
+<li><p>方式一：直接传入参数的值，而不是通过this.state调用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">selection: value</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">this</span>.fireOnSelect(value)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方式二：通过传入回调函数，它会在setState完成以后调用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">selection: value</span><br><span class="line">&#125;, <span class="keyword">this</span>.fireOnSelect(<span class="keyword">this</span>.state.selection))</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>setState同步执行的情况</p>
+<ul>
+<li>在setTimeOut中</li>
+</ul>
+</li>
+</ol>
+
         
         <br />
         <div id="comment-container">
