@@ -56,32 +56,32 @@
             <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>主页</span>
+                    <span>HOME</span>
                 </a>
             </li>
             <li  class=active >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>标签</span>
+                    <span>TAGS</span>
                 </a>
             </li>
             <li >
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>存档</span>
+                    <span>ARCHIVES</span>
                 </a>
             </li>
             <li >
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>关于</span>
+                    <span>ABOUT</span>
                 </a>
             </li>
             
             <li>
                 <a id="search">
                     <i class="iconfont icon-sousuo1"></i>
-                    <span>搜索</span>
+                    <span>SEARCH</span>
                 </a>
             </li>
             
@@ -96,7 +96,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input"/>
-            <span id="begin-search">搜索</span>
+            <span id="begin-search">search</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -113,6 +113,8 @@
         <!-- Main Content -->
         <div id='tag_cloud' class="tags">
     
+    <a href="#计划" title="计划" rel="1">计划</a>
+    
     <a href="#ES6" title="ES6" rel="4">ES6</a>
     
     <a href="#promise" title="promise" rel="1">promise</a>
@@ -120,8 +122,6 @@
     <a href="#react" title="react" rel="2">react</a>
     
     <a href="#setState" title="setState" rel="1">setState</a>
-    
-    <a href="#计划" title="计划" rel="1">计划</a>
     
     <a href="#Node.js" title="Node.js" rel="1">Node.js</a>
     
@@ -137,13 +137,13 @@
     
     <a href="#代码规范" title="代码规范" rel="1">代码规范</a>
     
-    <a href="#快捷键" title="快捷键" rel="1">快捷键</a>
-    
     <a href="#博客" title="博客" rel="1">博客</a>
     
-    <a href="#查漏补缺" title="查漏补缺" rel="1">查漏补缺</a>
+    <a href="#快捷键" title="快捷键" rel="1">快捷键</a>
     
     <a href="#hexo" title="hexo" rel="1">hexo</a>
+    
+    <a href="#查漏补缺" title="查漏补缺" rel="1">查漏补缺</a>
     
     <a href="#redux" title="redux" rel="1">redux</a>
     
@@ -151,6 +151,27 @@
 
 <!-- 标签列表 -->
 
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="计划">
+                    <span class="tag-text">计划</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/30/2019-07-30个人日志/">
+            <h2 class="post-title">
+                月任务汇总
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
 
 <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="ES6">
@@ -284,27 +305,6 @@
         <a href="/2019/08/05/React-setState使用中需要注意的地方/">
             <h2 class="post-title">
                 React.setState使用中需要注意的地方
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-</div>
-
-<div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="计划">
-                    <span class="tag-text">计划</span>
-                </span>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2019/07/30/2019-07-30个人日志/">
-            <h2 class="post-title">
-                月任务汇总
             </h2>
             
         </a>
@@ -475,27 +475,6 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="快捷键">
-                    <span class="tag-text">快捷键</span>
-                </span>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2019/08/05/提高开发效率的技巧/">
-            <h2 class="post-title">
-                提高开发效率的技巧
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-</div>
-
-<div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="博客">
                     <span class="tag-text">博客</span>
                 </span>
@@ -517,8 +496,8 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="查漏补缺">
-                    <span class="tag-text">查漏补缺</span>
+                <span class="fa fa-tag listing-seperator" id="快捷键">
+                    <span class="tag-text">快捷键</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -526,9 +505,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2019/07/26/知识点集锦/">
+        <a href="/2019/08/05/提高开发效率的技巧/">
             <h2 class="post-title">
-                知识点集锦
+                提高开发效率的技巧
             </h2>
             
         </a>
@@ -550,6 +529,27 @@
         <a href="/2019/07/10/搭建个人博客/">
             <h2 class="post-title">
                 搭建个人博客
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="查漏补缺">
+                    <span class="tag-text">查漏补缺</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/26/知识点集锦/">
+            <h2 class="post-title">
+                知识点集锦
             </h2>
             
         </a>
