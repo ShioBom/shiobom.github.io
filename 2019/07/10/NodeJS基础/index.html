@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        NodeJS - undefined
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li  class=active >
+            <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>HOME</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-js-学习"><span class="toc-text">Node.js 学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#file"><span class="toc-text">file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#path"><span class="toc-text">path</span></a></li></ol></li></ol>
+</div>
+    
 </div>
 
 
@@ -112,60 +116,65 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2019-07-10</div>
-        <div class="post-info">
-            <a href="/2019/07/10/搭建个人博客/">
-                <h3>
-                    搭建个人博客
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#ES6" title="ES6">ES6</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        NodeJS
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2019-07-10</div>
-        <div class="post-info">
-            <a href="/2019/07/10/NodeJS基础/">
-                <h3>
-                    NodeJS
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#Node.js" title="Node.js">Node.js</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-07-10 12:41:51</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#Node.js" title="Node.js">Node.js</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
     </div>
-    
-</div>
-<ul class="pager">
-    
-    <li class="previous">
-        <a href="/page/3/">&larr; Newer Posts</a>
-    </li>
-    
-    
+    <div class="post-content ">
+        <h2 id="Node-js-学习"><a href="#Node-js-学习" class="headerlink" title="Node.js 学习"></a>Node.js 学习</h2><h3 id="file"><a href="#file" class="headerlink" title="file"></a>file</h3><p>所有的文件操作都有同步和异步两种形式</p>
+<ul>
+<li><p>使用该模块</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>process.cwd()：指定当前工作目录</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(process.cwd()); </span><br><span class="line"><span class="comment">//d:\Code\webpack-learn\201907-A-Train\25536-唐钰\Webpack\2019-7-18\fileOperate</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>fs.readFile(path,options,callback)</p>
+<ul>
+<li>path:文件路径</li>
+<li>options</li>
+<li>callback:</li>
 </ul>
+</li>
+<li><p>fs.write(path,data,options,callback)</p>
+<ul>
+<li>path：文件路径</li>
+<li>data</li>
+<li>options</li>
+<li>callback</li>
+</ul>
+</li>
+</ul>
+<h3 id="path"><a href="#path" class="headerlink" title="path"></a>path</h3><p><strong>path.resolve()</strong><br><strong>path.join()</strong></p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
 
     </div>
 </div>
@@ -213,7 +222,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>

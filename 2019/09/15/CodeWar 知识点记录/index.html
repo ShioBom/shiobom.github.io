@@ -11,7 +11,7 @@
 
     <title>
         
-        
+        CodeWar - undefined
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li  class=active >
+            <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>HOME</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CodeWar-刷题知识点记录"><span class="toc-text">CodeWar 刷题知识点记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#字符串"><span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#将字符串拆分成等长字符串的数组"><span class="toc-text">将字符串拆分成等长字符串的数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#求字符串中所有数字的总和"><span class="toc-text">求字符串中所有数字的总和</span></a></li></ol></li></ol></li></ol>
+</div>
+    
 </div>
 
 
@@ -112,60 +116,47 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 720px">
-    
-    <div class="post-preview">
-        <div class="post-time">2019-07-10</div>
-        <div class="post-info">
-            <a href="/2019/07/10/搭建个人博客/">
-                <h3>
-                    搭建个人博客
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#ES6" title="ES6">ES6</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#hexo" title="hexo">hexo</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        CodeWar
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2019-07-10</div>
-        <div class="post-info">
-            <a href="/2019/07/10/NodeJS基础/">
-                <h3>
-                    NodeJS
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#Node.js" title="Node.js">Node.js</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-09-15 12:41:51</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
     </div>
-    
-</div>
-<ul class="pager">
-    
-    <li class="previous">
-        <a href="/page/3/">&larr; Newer Posts</a>
-    </li>
-    
-    
+    <div class="post-content ">
+        <h1 id="CodeWar-刷题知识点记录"><a href="#CodeWar-刷题知识点记录" class="headerlink" title="CodeWar 刷题知识点记录"></a>CodeWar 刷题知识点记录</h1><p>为了熟悉ES6和TS的使用，于是开始了偶尔在 codewar 上面刷题的日子，先将遇到的知识点记录在这里，长期更新, 等内容多了以后再重新整理。</p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p>以下全是字符串相关的内容，</p>
+<h3 id="将字符串拆分成等长字符串的数组"><a href="#将字符串拆分成等长字符串的数组" class="headerlink" title="将字符串拆分成等长字符串的数组"></a>将字符串拆分成等长字符串的数组</h3><p>利用正则能很方便的实现这个功能需求。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'abcdefghijklmnopqrstuvwxyz'</span>.match(<span class="regexp">/.&#123;1,6&#125;/g</span>);  </span><br><span class="line"><span class="comment">// 这里利用了贪心，最后不足 6 个也会被匹配</span></span><br><span class="line"><span class="string">'abcdefghijklmnopqrstuvwxyz'</span>.match(<span class="regexp">/.&#123;6&#125;/g</span>);  </span><br><span class="line"><span class="comment">// 最后不足 6 的会被抛弃</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="求字符串中所有数字的总和"><a href="#求字符串中所有数字的总和" class="headerlink" title="求字符串中所有数字的总和"></a>求字符串中所有数字的总和</h3><ul>
+<li>方法一</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.match(<span class="regexp">/\d/g</span>).reduce(<span class="function">(<span class="params">n, c</span>) =&gt;</span> n + +c, <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方法二</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.split(<span class="string">''</span>).reduce(<span class="function">(<span class="params">a, c</span>) =&gt;</span> a + (<span class="built_in">isNaN</span>(+c) ? <span class="number">0</span> : +c), <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
 
     </div>
 </div>
@@ -213,7 +204,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
