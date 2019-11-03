@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        TS +  mocha 学习 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>鱼玉玉玉</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#TS-mocha-学习"><span class="toc-text">TS +  mocha 学习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mocha"><span class="toc-text">mocha</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        TS +  mocha 学习
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-09-20 16:36:50</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="TS-mocha-学习"><a href="#TS-mocha-学习" class="headerlink" title="TS +  mocha 学习"></a>TS +  mocha 学习</h2><p><strong>环境配置</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn global add typescript</span><br></pre></td></tr></table></figure>
+
+<p><strong>vscode 配置 TypeScript 自动编译 .ts</strong></p>
+<ol>
+<li><code>tsc --init</code>:生成 <code>tsconfig.json</code>配置文件</li>
+<li>点击 vscode 菜单 =&gt;终端=&gt;运行任务，选择 <code>tsc:watch tsconfig.json</code>,这样，每次修改后保存，都会重新编译。</li>
+</ol>
+<blockquote>
+<p>注意：终端必须使用 cmd，bash 终端会报错</p>
+</blockquote>
+<p><strong>ts-node 使用</strong></p>
+<p><a href="https://github.com/TypeStrong/ts-node" target="_blank" rel="noopener">ts-node官方仓库地址</a></p>
+<ul>
+<li>安装依赖</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yarn add ts-node --dev</span><br><span class="line">yarn add typescript --dev</span><br><span class="line">或者</span><br><span class="line">yarn global add ts-node</span><br><span class="line">yarn global  add typescript</span><br></pre></td></tr></table></figure>
+
+<p>如果是 node 应用，为了让 TypeScript 能够进行 node 类型推导，则需要安装 Node 对应的类型声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add @types/node --dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>使用</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ts-node demo.ts <span class="comment">//执行该文件</span></span><br><span class="line">ts-node-dev demo.ts <span class="comment">//执行该文件并一直监听变化，类似nodemon</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ts-node传入cli参数</li>
+</ul>
+<p>ts-node没法接受命令行参数，需要配置==vscode==的launch.json文件</p>
+<p><a href="https://segmentfault.com/a/1190000014664764" target="_blank" rel="noopener">可参考文章</a><br><a href="https://www.cnblogs.com/xuanmanstein/p/9946629.html" target="_blank" rel="noopener">vscode下ts-node传入cli参数</a><br>配合 ts-node 官方文档食用更佳</p>
+<p><strong>ts-node-dev</strong></p>
+<p><code>ts-node-dev</code> 就类似 <code>node</code> 中的 <code>nodemon</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add ts-node-dev --dev</span><br></pre></td></tr></table></figure>
+
+<p>在package.json 的scripts 中添加以下代码</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"start"</span>: <span class="string">"./node_modules/.bin/ts-node-dev --respawn --transpileOnly src/index.ts"</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>参考文档</strong></p>
+<p><a href="https://tasaid.com/blog/2018122819513079.html" target="_blank" rel="noopener">使用 TypeScript 编写一个完善包含测试、文档和持续集成的库</a></p>
+<h2 id="mocha"><a href="#mocha" class="headerlink" title="mocha"></a>mocha</h2><p><strong>安装</strong></p>
+<ul>
+<li>在项目中安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add mocha --dev</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>全局安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn global mocha --dev</span><br></pre></td></tr></table></figure>
+
+<p><strong>基本命令</strong></p>
+<ul>
+<li><code>mocha add.test.js</code> ： 执行测试脚本</li>
+<li><code>mocha file1 file2 file3</code>：指定多个测试脚本</li>
+</ul>
+<p>mocha 默认运行 test 子目录里面的测试脚本</p>
+<ul>
+<li><code>mocha</code>：test 子目录里面的测试脚本被执行了，但只执行第一层的测试脚本，若还有文件夹里有测试脚本并不会执行。</li>
+<li><code>mocha --recursive</code>：加上<code>--recursive</code>参数，不管哪一层的测试脚本，都会执行。</li>
+</ul>
+<p><strong>其他命令行参数</strong></p>
+<ul>
+<li><code>--help,-h</code>：查看 Mocha 的所有命令行参数。</li>
+<li><code>--reporter,-R</code>：指定测试报告的格式，默认是 spec 格式。<a href="https://mochajs.org/#reporters" target="_blank" rel="noopener">其他格式</a></li>
+<li><code>--growl, -G</code>：将测试结果在桌面显示</li>
+<li><code>--watch，-w</code>：监视指定的测试脚本变化，修改脚本后保存，mocha 会自动变化。</li>
+<li><code>--bail, -b</code>：只要有一个测试用例没有通过，就停止执行后面的测试用例</li>
+<li><code>--grep, -g</code>：执行匹配的测试用例</li>
+<li><code>--invert, -i</code>：只运行不符合条件的测试脚本，必须与<code>--grep</code>配合使用</li>
+<li><code>--timeout,-t</code>：改变默认的超时设置，<code>-t 5000</code> 设置超时时间为5000毫秒</li>
+<li><code>--slow,-s</code>：高亮超过时间的测试用例， <code>-s 1000</code>，高亮超过1000ms 的测试用例</li>
+<li><code>--compilers</code>：–compilers 参数后面紧跟一个用冒号分隔的字符串，冒号左边是文件的后缀名，右边是用来处理这一类文件的模块名。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">../node_modules/mocha/bin/mocha --compilers js:babel-core/register</span><br></pre></td></tr></table></figure>
+
+<p>上面代码表示，运行测试之前，先用babel-core/register模块，处理一下.js文件。由于这里的转码器安装在项目内，所以要使用项目内安装的Mocha；如果转码器安装在全局，就可以使用全局的Mocha。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mocha --grep &quot;1 加 1&quot; --invert</span><br></pre></td></tr></table></figure>
+
+<p><strong>mochawesome模块</strong></p>
+<p>该模块可以生成漂亮的 HTML 格式的报告</p>
+<ul>
+<li>安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add mochawesome --dev</span><br><span class="line">../node_modules/.bin/mocha --reporter mochawesome</span><br></pre></td></tr></table></figure>
+
+<p>执行完相关命令后，会生成 <code>mochawesome-report</code> 目录，里面存放着 html 报告。</p>
+<p><strong>配置文件mocha.opts</strong></p>
+<p>Mocha 允许在==test==目录下面，放置配置文件<code>mocha.opts</code>，里面写入需要的命令行参数，直接通过<code>mocha</code>就能达到一样的效果，而不需要长长的命令了， 如果测试用例不是放在 test 子目录，可以在 mocha.opts 写入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server-tests // 执行 server-tests 文件夹下的测试用例</span><br><span class="line">--recursive  //执行子目录下的测试用例</span><br></pre></td></tr></table></figure>
+
+<p><strong>ES6写的测试脚本</strong></p>
+<p>如果测试脚本是用ES6写的，那么运行测试之前，需要先用Babel转码</p>
+<p><strong>测试用例的钩子</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">describe(&apos;hooks&apos;, function() &#123;</span><br><span class="line"></span><br><span class="line">  before(function() &#123;</span><br><span class="line">    // 在本区块的所有测试用例之前执行</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  after(function() &#123;</span><br><span class="line">    // 在本区块的所有测试用例之后执行</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  beforeEach(function() &#123;</span><br><span class="line">    // 在本区块的每个测试用例之前执行</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  afterEach(function() &#123;</span><br><span class="line">    // 在本区块的每个测试用例之后执行</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  // test cases</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>describe块和it块的方法</strong></p>
+<ul>
+<li>only：只有带有 only 方法的测试用例会运行</li>
+<li>skip：跳过指定的测试套件或测试用例</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">it.only(&apos;1 加 1 应该等于 2&apos;, function() &#123;</span><br><span class="line">  expect(add(1, 1)).to.be.equal(2);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">it.skip(&apos;任何数加0应该等于自身&apos;, function() &#123;</span><br><span class="line">  expect(add(1, 0)).to.be.equal(1);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/ShioBom">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

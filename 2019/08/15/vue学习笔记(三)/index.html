@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Vuex - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>鱼玉玉玉</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vuex"><span class="toc-text">vuex</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#transition"><span class="toc-text">transition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vue-router"><span class="toc-text">vue-router</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#keep-alive"><span class="toc-text">keep-alive</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#axios"><span class="toc-text">axios</span></a>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Vuex
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-08-15 16:36:50</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h3 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h3><p>核心是 store，包含着应用中的大部分状态<br>Mutations 存放的是改变 state 的方法，更改store的状态的唯一方法是提交 mutation<br>Actions 存放的是一些业务逻辑，通常是异步任务。</p>
+<p><strong>安装</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add vuex</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import Vue from ‘vuex’</span><br><span class="line">import Vuex from &apos;vuex&apos;</span><br><span class="line">Vue.use(Vuex)</span><br></pre></td></tr></table></figure>
+
+<p>==推荐使用辅助函数==</p>
+<ul>
+<li>state</li>
+<li>Getter<br>可以认为是store的计算属性，getter的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算。</li>
+<li>Mutation<br>mutation必须是同步函数</li>
+<li>Action<br>通过提交 mutation 实现状态更新，而不是直接更新状态<br>可以包含异步操作</li>
+<li>Module<br>模块化状态,对每个模块添加命名空间(重要)</li>
+</ul>
+<h3 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h3><p>Vue在插入、更新或者删除时，提供多种不同方式的应用过渡效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;transition</span><br><span class="line">	enter-class=&quot;&quot;</span><br><span class="line">	enter-active-class=&quot;animated fadeInLeft&quot;</span><br><span class="line">	enter-to-class=&quot;&quot;</span><br><span class="line">	leave-class=&quot;&quot;</span><br><span class="line">	leave-active-class=&quot;animated fadeOutLeft&quot;</span><br><span class="line">	leave-to-class=&quot;&quot;</span><br><span class="line">&gt;</span><br><span class="line">	&lt;div class=&quot;tmp&quot; v-if=&quot;isShow&quot;&gt;div&lt;/div&gt;</span><br><span class="line">&lt;/transition&gt;</span><br></pre></td></tr></table></figure>
+
+<p>动画钩子函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;transition</span><br><span class="line">	v-on:before-enter=&quot;beforeEnter&quot;</span><br><span class="line">	v-on:enter=&quot;enter&quot;</span><br><span class="line">	v-on:after-enter=&quot;afterEnter&quot;</span><br><span class="line">	v-on:before-leave=&quot;beforeLeave&quot;</span><br><span class="line">	v-on:leave=&quot;leave&quot;</span><br><span class="line">	v-on:after-leave=“afterLeave”</span><br><span class="line">	v-on:leave-cancelled=&quot;leaveCancelled&quot;</span><br><span class="line">&gt;</span><br><span class="line">methods:&#123;</span><br><span class="line">	...</span><br><span class="line">	enter:function(el,done)&#123;</span><br><span class="line">		done() // 表示完成动画</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h3><p><strong>安装</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add vue-router</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用</strong></p>
+<ul>
+<li><p>在main.js里</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import VueRouter from &apos;vue-router&apos;</span><br><span class="line">Vue.use(VueRouter)</span><br><span class="line">new Vue(&#123;</span><br><span class="line">	el:&quot;#app&quot;,</span><br><span class="line">	router,</span><br><span class="line">	render:h=&gt;h(App)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置路由</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var routes =[</span><br><span class="line">	&#123;path:&apos;/&apos;,component:ind&#125;,</span><br><span class="line">	&#123;path:&apos;/msg&apos;,component:msg&#125;,</span><br><span class="line">	&#123;path:&apos;/hi&apos;,component:hi&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>界面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">	&lt;router-link to=&quot;/&quot;&gt;ind&lt;/router-link&gt;</span><br><span class="line">	&lt;router-link to=&quot;/msg&quot;&gt;msg&lt;/router-link&gt;</span><br><span class="line">	&lt;router-link to=&quot;/hi&quot;&gt;hi&lt;/router-link&gt;</span><br><span class="line">	&lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>路由模式</strong></p>
+<ul>
+<li>history：常用的模式</li>
+<li>hash：哈希，网址含<code>#</code></li>
+<li>abstract：网址不变</li>
+</ul>
+<p><strong>路由传参</strong></p>
+<ul>
+<li>通过params</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;path:&quot;/msg/:id/:msg&quot;,component:msg&#125;</span><br><span class="line">&lt;router-link to=&quot;/msg/1/2&quot;&gt;msg&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这样的传参通过<code>this.$route.params.age获取</code></p>
+<ul>
+<li>通过query<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;path:&quot;/msg&quot;,component:msg&#125;</span><br><span class="line">&lt;router-link to=&quot;/msg?a=1&amp;b=2&quot;&gt;msg&lt;/router-link&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>编程式导航</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.$router.push(&quot;/&quot;)</span><br><span class="line">this.$router.push(&#123;path:&apos;/msg&apos;,query:&#123;a:1,b:2&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>这样的传参通过<code>this.$route.query获取</code></p>
+<ul>
+<li>导航方式总结</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">声明式导航</th>
+<th align="right">编程式导航</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>&lt;router-link to=&quot;/&quot;&gt;</code></td>
+<td align="right">this.$router.push(‘/‘)</td>
+<td align="center">向history中添加记录</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;router-link to=&quot;/&quot; replace&gt;</code></td>
+<td align="right">this.$router.replace(‘/‘)</td>
+<td align="center">不会向history中添加记录</td>
+</tr>
+<tr>
+<td align="left">————</td>
+<td align="right">this.$router.go(1)</td>
+<td align="center">历史记录中前进一页</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>params和query传参的区别，params 刷新页面，数据会丢失，解决办法是采用浏览器缓存（sessionStorage和localStorage）或者cookie将数据缓存下来。而query会把数据暴露在地址栏中， 类似get请求。</p>
+</blockquote>
+<p><strong>嵌套路由规则</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	path:&quot;/list&quot;,</span><br><span class="line">	component:List,</span><br><span class="line">	children:[</span><br><span class="line">		&#123;path:&quot;/list/a&quot;,component:PageA&#125;,</span><br><span class="line">		&#123;path:&quot;/list/b&quot;,components:PageB&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="keep-alive"><a href="#keep-alive" class="headerlink" title="keep-alive"></a>keep-alive</h3><p><code>&lt;keep-alive&gt;</code>是一个抽象组件，包裹动态组件时，会缓存不活动的组件实例，而不是销毁它们</p>
+<ul>
+<li><p><strong>props</strong></p>
+<ul>
+<li><code>include</code>：字符串或正则表达式。只有名称匹配的组件会被缓存。</li>
+<li><code>exclude</code>：字符串或正则表达式。任何名称匹配的组件都不会被缓存。</li>
+<li><code>max</code>：最多可以缓存多少组件实例。</li>
+</ul>
+</li>
+<li><p><strong>keep-alive 提供了两个新的生命周期钩子函数</strong></p>
+<ul>
+<li><code>actived</code>:keep-alive 组件激活时调用。</li>
+<li><code>deactived</code>:keep-alive 组件停用时调用。</li>
+</ul>
+</li>
+</ul>
+<h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><p>可以添加拦截器，请求拦截器和响应拦截器。在里面可以做 toast 提示</p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/ShioBom">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

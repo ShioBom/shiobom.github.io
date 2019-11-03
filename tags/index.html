@@ -113,13 +113,25 @@
         <!-- Main Content -->
         <div id='tag_cloud' class="tags">
     
-    <a href="#react" title="react" rel="2">react</a>
+    <a href="#babel" title="babel" rel="1">babel</a>
     
-    <a href="#setState" title="setState" rel="1">setState</a>
+    <a href="#博客" title="博客" rel="3">博客</a>
     
     <a href="#ES6" title="ES6" rel="4">ES6</a>
     
     <a href="#promise" title="promise" rel="1">promise</a>
+    
+    <a href="#react" title="react" rel="3">react</a>
+    
+    <a href="#setState" title="setState" rel="1">setState</a>
+    
+    <a href="#redux" title="redux" rel="1">redux</a>
+    
+    <a href="#vue" title="vue" rel="1">vue</a>
+    
+    <a href="#watch侦听器" title="watch侦听器" rel="1">watch侦听器</a>
+    
+    <a href="#生命周期" title="生命周期" rel="1">生命周期</a>
     
     <a href="#Node.js" title="Node.js" rel="1">Node.js</a>
     
@@ -127,15 +139,23 @@
     
     <a href="#代码规范" title="代码规范" rel="1">代码规范</a>
     
-    <a href="#快捷键" title="快捷键" rel="1">快捷键</a>
+    <a href="#Promise" title="Promise" rel="1">Promise</a>
     
-    <a href="#博客" title="博客" rel="1">博客</a>
+    <a href="#Javascript" title="Javascript" rel="1">Javascript</a>
     
-    <a href="#查漏补缺" title="查漏补缺" rel="1">查漏补缺</a>
+    <a href="#css" title="css" rel="2">css</a>
+    
+    <a href="#省略号" title="省略号" rel="2">省略号</a>
+    
+    <a href="#元素水平垂直居中" title="元素水平垂直居中" rel="2">元素水平垂直居中</a>
+    
+    <a href="#改变滚动条样式" title="改变滚动条样式" rel="2">改变滚动条样式</a>
     
     <a href="#hexo" title="hexo" rel="1">hexo</a>
     
-    <a href="#redux" title="redux" rel="1">redux</a>
+    <a href="#快捷键" title="快捷键" rel="1">快捷键</a>
+    
+    <a href="#查漏补缺" title="查漏补缺" rel="1">查漏补缺</a>
     
 </div>
 
@@ -143,8 +163,8 @@
 
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="react">
-                    <span class="tag-text">react</span>
+                <span class="fa fa-tag listing-seperator" id="babel">
+                    <span class="tag-text">babel</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -152,23 +172,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2019/08/05/React-setState使用中需要注意的地方/">
+        <a href="/2019/07/29/Babel/">
             <h2 class="post-title">
-                React.setState使用中需要注意的地方
-            </h2>
-            
-        </a>
-        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-    </div>
-    
-    <!-- <li class="listing-item">
-    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </li> -->
-    <div class="post-preview">
-        <a href="/2019/07/29/react-Hooks/">
-            <h2 class="post-title">
-                react-Hooks
+                Babel的入门学习笔记
             </h2>
             
         </a>
@@ -178,8 +184,8 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="setState">
-                    <span class="tag-text">setState</span>
+                <span class="fa fa-tag listing-seperator" id="博客">
+                    <span class="tag-text">博客</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -187,9 +193,37 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2019/08/05/React-setState使用中需要注意的地方/">
+        <a href="/2019/10/12/Git基本使用/">
             <h2 class="post-title">
-                React.setState使用中需要注意的地方
+                Git 学习
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/前端好文集锦/">
+            <h2 class="post-title">
+                前端博客集锦
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/收藏的BlogList/">
+            <h2 class="post-title">
+                收藏的博客列表
             </h2>
             
         </a>
@@ -283,6 +317,160 @@
 </div>
 
 <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="react">
+                    <span class="tag-text">react</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/08/05/React-setState使用中需要注意的地方/">
+            <h2 class="post-title">
+                React.setState使用中需要注意的地方
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/react-Hooks/">
+            <h2 class="post-title">
+                react-Hooks
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/24/React和redux错误集锦/">
+            <h2 class="post-title">
+                React和redux错误集锦
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="setState">
+                    <span class="tag-text">setState</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/08/05/React-setState使用中需要注意的地方/">
+            <h2 class="post-title">
+                React.setState使用中需要注意的地方
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="redux">
+                    <span class="tag-text">redux</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/09/21/Redux/">
+            <h2 class="post-title">
+                Redux
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="vue">
+                    <span class="tag-text">vue</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/08/08/vue学习笔记(一)/">
+            <h2 class="post-title">
+                vue学习笔记
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="watch侦听器">
+                    <span class="tag-text">watch侦听器</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/08/08/vue学习笔记(一)/">
+            <h2 class="post-title">
+                vue学习笔记
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="生命周期">
+                    <span class="tag-text">生命周期</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/08/08/vue学习笔记(一)/">
+            <h2 class="post-title">
+                vue学习笔记
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="Node.js">
                     <span class="tag-text">Node.js</span>
                 </span>
@@ -346,8 +534,8 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="快捷键">
-                    <span class="tag-text">快捷键</span>
+                <span class="fa fa-tag listing-seperator" id="Promise">
+                    <span class="tag-text">Promise</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -355,9 +543,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2019/08/05/提高开发效率的技巧/">
+        <a href="/2019/07/28/关于一些你不知道的知识/">
             <h2 class="post-title">
-                提高开发效率的技巧
+                关于一些你不知道的知识
             </h2>
             
         </a>
@@ -367,8 +555,8 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="博客">
-                    <span class="tag-text">博客</span>
+                <span class="fa fa-tag listing-seperator" id="Javascript">
+                    <span class="tag-text">Javascript</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -376,9 +564,9 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2019/07/29/前端好文集锦/">
+        <a href="/2019/07/28/关于一些你不知道的知识/">
             <h2 class="post-title">
-                前端博客集锦
+                关于一些你不知道的知识
             </h2>
             
         </a>
@@ -388,8 +576,8 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="查漏补缺">
-                    <span class="tag-text">查漏补缺</span>
+                <span class="fa fa-tag listing-seperator" id="css">
+                    <span class="tag-text">css</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -397,9 +585,128 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2019/07/26/知识点集锦/">
+        <a href="/2019/07/29/使用Vue过程中遇到的问题/">
             <h2 class="post-title">
-                知识点集锦
+                使用Vue过程中遇到的问题
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/清除浮动，元素水平垂直居中，文字显示省略号/">
+            <h2 class="post-title">
+                css相关知识补充
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="省略号">
+                    <span class="tag-text">省略号</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/使用Vue过程中遇到的问题/">
+            <h2 class="post-title">
+                使用Vue过程中遇到的问题
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/清除浮动，元素水平垂直居中，文字显示省略号/">
+            <h2 class="post-title">
+                css相关知识补充
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="元素水平垂直居中">
+                    <span class="tag-text">元素水平垂直居中</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/使用Vue过程中遇到的问题/">
+            <h2 class="post-title">
+                使用Vue过程中遇到的问题
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/清除浮动，元素水平垂直居中，文字显示省略号/">
+            <h2 class="post-title">
+                css相关知识补充
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="改变滚动条样式">
+                    <span class="tag-text">改变滚动条样式</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/使用Vue过程中遇到的问题/">
+            <h2 class="post-title">
+                使用Vue过程中遇到的问题
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/29/清除浮动，元素水平垂直居中，文字显示省略号/">
+            <h2 class="post-title">
+                css相关知识补充
             </h2>
             
         </a>
@@ -430,8 +737,8 @@
 </div>
 
 <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="redux">
-                    <span class="tag-text">redux</span>
+                <span class="fa fa-tag listing-seperator" id="快捷键">
+                    <span class="tag-text">快捷键</span>
                 </span>
     
     <!-- <li class="listing-item">
@@ -439,9 +746,30 @@
     <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li> -->
     <div class="post-preview">
-        <a href="/2019/07/24/React和redux错误集锦/">
+        <a href="/2019/08/05/提高开发效率的技巧/">
             <h2 class="post-title">
-                React和redux错误集锦
+                提高开发效率的技巧
+            </h2>
+            
+        </a>
+        <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+    </div>
+    
+</div>
+
+<div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="查漏补缺">
+                    <span class="tag-text">查漏补缺</span>
+                </span>
+    
+    <!-- <li class="listing-item">
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+    <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    </li> -->
+    <div class="post-preview">
+        <a href="/2019/07/26/知识点集锦/">
+            <h2 class="post-title">
+                一些遇到的知识盲点
             </h2>
             
         </a>

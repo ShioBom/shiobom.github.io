@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Stylus - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>鱼玉玉玉</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stylus"><span class="toc-text">Stylus</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分号，冒号，大括号是可选的"><span class="toc-text">分号，冒号，大括号是可选的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#同样支持父选择器引用"><span class="toc-text">同样支持父选择器引用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#混入Mixins"><span class="toc-text">混入Mixins</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#变量"><span class="toc-text">变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消除歧义"><span class="toc-text">消除歧义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插值"><span class="toc-text">插值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运算符"><span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内置方法"><span class="toc-text">内置方法</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Stylus
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-08-16 16:36:50</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="Stylus"><a href="#Stylus" class="headerlink" title="Stylus"></a>Stylus</h2><p><a href="https://www.zhangxinxu.com/jq/stylus/variables.php" target="_blank" rel="noopener">stylus参考文档</a></p>
+<h3 id="分号，冒号，大括号是可选的"><a href="#分号，冒号，大括号是可选的" class="headerlink" title="分号，冒号，大括号是可选的"></a>分号，冒号，大括号是可选的</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> <span class="selector-tag">button</span>,</span><br><span class="line"><span class="selector-tag">body</span> <span class="selector-tag">button</span><span class="selector-class">.button</span>,</span><br><span class="line"><span class="selector-tag">body</span> <span class="selector-tag">input</span>[type=<span class="string">'button'</span>],</span><br><span class="line"><span class="selector-tag">body</span> <span class="selector-tag">input</span>[type=<span class="string">'submit'</span>] &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="同样支持父选择器引用"><a href="#同样支持父选择器引用" class="headerlink" title="同样支持父选择器引用"></a>同样支持父选择器引用</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ul</span><br><span class="line">  <span class="selector-tag">li</span> a</span><br><span class="line">    <span class="attribute">display</span>: block</span><br><span class="line">    <span class="attribute">color</span>: blue</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">5px</span></span><br><span class="line">    <span class="selector-tag">html</span><span class="selector-class">.ie</span> &amp;</span><br><span class="line">      <span class="attribute">padding</span>: <span class="number">6px</span></span><br><span class="line">    &amp;:hover</span><br><span class="line">      <span class="attribute">color</span>: red</span><br></pre></td></tr></table></figure>
+
+<h3 id="混入Mixins"><a href="#混入Mixins" class="headerlink" title="混入Mixins"></a>混入Mixins</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  <span class="attribute">border-radius</span>(val)</span><br><span class="line">  -webkit-<span class="attribute">border-radius</span>: val</span><br><span class="line">  -moz-<span class="attribute">border-radius</span>: val</span><br><span class="line">  <span class="attribute">border-radius</span>: val</span><br><span class="line">  </span><br><span class="line"><span class="selector-tag">button</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>  <span class="number">5px</span>; <span class="comment">//不是通过括号来调用的</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因此，我们可以利用arguments这个局部变量，传递可以包含多值的表达式。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">border-radius</span><span class="params">()</span></span></span><br><span class="line">  -webkit-<span class="attribute">border-radius</span> arguments</span><br><span class="line">  -moz-<span class="attribute">border-radius</span> arguments</span><br><span class="line">  <span class="attribute">border-radius</span> arguments</span><br><span class="line"><span class="selector-tag">button</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>  <span class="number">5px</span> <span class="number">2px</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p><strong>可以返回值</strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">add</span><span class="params">(a, b)</span></span></span><br><span class="line">  <span class="selector-tag">a</span> + b</span><br><span class="line"><span class="selector-tag">body</span> </span><br><span class="line">  <span class="attribute">padding</span> add(<span class="number">10px</span>, <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<p>编译后</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>默认参数</strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">add</span><span class="params">(a, b = unit(a, px)</span></span>)</span><br><span class="line">  <span class="selector-tag">a</span> + b</span><br></pre></td></tr></table></figure>
+
+<p><strong>多个返回值</strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">sizes</span><span class="params">()</span></span></span><br><span class="line"> <span class="number">15px</span> <span class="number">10px</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">sizes</span><span class="params">()</span></span>[<span class="number">0</span>] <span class="comment">// 15px</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>变量函数</strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">invoke</span><span class="params">(a, b, fn)</span></span></span><br><span class="line">  fn(<span class="selector-tag">a</span>, b)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">add</span><span class="params">(a, b)</span></span></span><br><span class="line">  <span class="selector-tag">a</span> + b</span><br><span class="line"></span><br><span class="line">body</span><br><span class="line">  <span class="attribute">padding</span> invoke(<span class="number">5</span>, <span class="number">10</span>, add)</span><br><span class="line">  <span class="attribute">padding</span> invoke(<span class="number">5</span>, <span class="number">10</span>, sub)</span><br></pre></td></tr></table></figure>
+
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p><strong>标识符 <code>$</code></strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$bgColor</span> = red</span><br><span class="line">div&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="variable">$bgColor</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>属性查找</strong></p>
+<p>例如： 元素水平垂直居中对齐（使用百分比和margin负值）</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#logo</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span></span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span></span><br><span class="line">  <span class="attribute">width</span>: w = <span class="number">150px</span></span><br><span class="line">  <span class="attribute">height</span>: h = <span class="number">80px</span></span><br><span class="line">  <span class="attribute">margin-left</span>: -(w / <span class="number">2</span>)</span><br><span class="line">  <span class="attribute">margin-top</span>: -(h / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>可以改写为</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#logo</span><br><span class="line">  <span class="attribute">position</span>: absolute</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span></span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span></span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span></span><br><span class="line">  <span class="attribute">height</span>: <span class="number">80px</span></span><br><span class="line">  <span class="attribute">margin-left</span>: -(@width / <span class="number">2</span>)</span><br><span class="line">  <span class="attribute">margin-top</span>: -(@height / <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="消除歧义"><a href="#消除歧义" class="headerlink" title="消除歧义"></a>消除歧义</h3><p>避免被解释成减法运算</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">pad</span><span class="params">(n)</span></span></span><br><span class="line">	<span class="attribute">padding</span> (-n) </span><br><span class="line">body</span><br><span class="line">	pad(<span class="number">5px</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h3><p><strong>私有前缀属性扩展</strong></p>
+<p>使用<code>{}</code>来插入值</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">vendor</span><span class="params">(prop, args)</span></span></span><br><span class="line">  -webkit-&#123;prop&#125; args</span><br><span class="line">  -moz-&#123;prop&#125; args</span><br><span class="line">  &#123;prop&#125; args</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">border-radius</span><span class="params">()</span></span></span><br><span class="line">  vendor(<span class="string">'border-radius'</span>, arguments)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">box-shadow</span><span class="params">()</span></span></span><br><span class="line">  vendor(<span class="string">'box-shadow'</span>, arguments)</span><br><span class="line"></span><br><span class="line">button</span><br><span class="line">  <span class="attribute">border-radius</span> <span class="number">1px</span> <span class="number">2px</span> / <span class="number">3px</span> <span class="number">4px</span></span><br></pre></td></tr></table></figure>
+
+<p>编译后</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span> &#123;</span><br><span class="line">  -webkit-<span class="attribute">border-radius</span>: <span class="number">1px</span> <span class="number">2px</span> / <span class="number">3px</span> <span class="number">4px</span>;</span><br><span class="line">  -moz-<span class="attribute">border-radius</span>: <span class="number">1px</span> <span class="number">2px</span> / <span class="number">3px</span> <span class="number">4px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">1px</span> <span class="number">2px</span> / <span class="number">3px</span> <span class="number">4px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>选择器插值</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">table</span><br><span class="line">  <span class="keyword">for</span> row <span class="keyword">in</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br><span class="line">    tr:nth-child(&#123;row&#125;)</span><br><span class="line">      height: <span class="number">10</span>px * row</span><br></pre></td></tr></table></figure>
+
+<p>编译后</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">tr</span>:nth-child(<span class="number">1</span>) &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">tr</span>:nth-child(<span class="number">2</span>) &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">tr</span>:nth-child(<span class="number">3</span>) &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">tr</span>:nth-child(<span class="number">4</span>) &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">tr</span>:nth-child(<span class="number">5</span>) &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><p>下列运算符优先级从高到低</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[]</span><br><span class="line">! ~ + -</span><br><span class="line">is defined</span><br><span class="line">** * / %</span><br><span class="line">+ -</span><br><span class="line">... ..</span><br><span class="line">&lt;= &gt;= &lt; &gt;</span><br><span class="line">in</span><br><span class="line">== is != is not isnt</span><br><span class="line">is a</span><br><span class="line">&amp;&amp; and || or</span><br><span class="line">?:</span><br><span class="line">= := ?= += -= *= /= %=</span><br><span class="line">not</span><br><span class="line">if unless</span><br></pre></td></tr></table></figure>
+
+<p>这里只列举陌生的运算符</p>
+<p><strong>逻辑运算符</strong></p>
+<ul>
+<li><code>&amp;&amp;</code>同 <code>and</code></li>
+<li><code>||</code> 同 <code>or</code></li>
+<li><code>not</code><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">not true <span class="comment">// false</span></span><br><span class="line">not not true <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><strong>下标运算符</strong></p>
+<p><strong>范围</strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>..<span class="number">5</span> <span class="comment">// 1 2 3 4 5</span></span><br><span class="line"><span class="number">1</span>...<span class="number">5</span> <span class="comment">// 1 2 3 4</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>加减</strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">15px</span> - <span class="number">5px</span></span><br><span class="line"><span class="comment">// =&gt; 10px</span></span><br><span class="line"></span><br><span class="line"><span class="number">5</span> - <span class="number">2</span></span><br><span class="line"><span class="comment">// =&gt; 3</span></span><br><span class="line"></span><br><span class="line"><span class="number">5in</span> - <span class="number">50mm</span></span><br><span class="line"><span class="comment">// =&gt; 3.031in</span></span><br><span class="line"></span><br><span class="line"><span class="number">5s</span> - <span class="number">1000ms</span></span><br><span class="line"><span class="comment">// =&gt; 4s</span></span><br><span class="line"></span><br><span class="line"><span class="number">20mm</span> + <span class="number">4in</span></span><br><span class="line"><span class="comment">// =&gt; 121.6mm</span></span><br><span class="line"></span><br><span class="line"><span class="string">"foo "</span> + <span class="string">"bar"</span></span><br><span class="line"><span class="comment">// =&gt; "foo bar"</span></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">**乘除**</span><br><span class="line"></span><br><span class="line">当在属性值内使用/时候，你必须用括号包住</span><br><span class="line"></span><br><span class="line">```stylus</span><br><span class="line"><span class="attribute">font</span>: (<span class="number">14px</span>/<span class="number">1.5</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>指数</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2 ** 8 //256</span><br></pre></td></tr></table></figure>
+
+<p><strong>存在操作符in</strong></p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="keyword">in</span> <span class="number">1</span>..<span class="number">3</span>  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="内置方法"><a href="#内置方法" class="headerlink" title="内置方法"></a>内置方法</h3><p><a href="https://www.zhangxinxu.com/jq/stylus/bifs.php" target="_blank" rel="noopener">内置方法</a></p>
+<ul>
+<li><code>unit()</code><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">unit</span><span class="params">(<span class="number">10</span>)</span></span></span><br><span class="line"><span class="comment">// =&gt; ''</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">unit</span><span class="params">(<span class="number">15in</span>)</span></span></span><br><span class="line"><span class="comment">// =&gt; 'in'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">unit</span><span class="params">(<span class="number">15%</span>, <span class="string">'px'</span>)</span></span></span><br><span class="line"><span class="comment">// =&gt; 15px</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">unit</span><span class="params">(<span class="number">15%</span>, px)</span></span></span><br><span class="line"><span class="comment">// =&gt; 15px</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/ShioBom">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

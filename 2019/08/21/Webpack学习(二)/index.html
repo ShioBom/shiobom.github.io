@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Webpack学习(二) - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>鱼玉玉玉</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#webpack学习笔记"><span class="toc-text">webpack学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#context"><span class="toc-text">context</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack配置之devtool"><span class="toc-text">webpack配置之devtool</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#module-noParse"><span class="toc-text">module.noParse</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#webpack配置的导出"><span class="toc-text">webpack配置的导出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#resolve"><span class="toc-text">resolve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何快速定位-Webpack-速度慢的原因"><span class="toc-text">如何快速定位 Webpack 速度慢的原因</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Webpack学习(二)
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-08-21 16:36:50</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="webpack学习笔记"><a href="#webpack学习笔记" class="headerlink" title="webpack学习笔记"></a>webpack学习笔记</h2><h3 id="context"><a href="#context" class="headerlink" title="context"></a>context</h3><p>context，字符串类型,顾名思义，上下文，用一个实际的小例子来解释。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.export = &#123;</span><br><span class="line">    context: path.resolve(_dirname,<span class="string">"src"</span>),</span><br><span class="line">    entry:path.resolve(_dirname,<span class="string">"./index.js"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果没有配置 context 变量。我们的entry路径应该是 <code>./src/index.js</code>.</p>
+<h3 id="webpack配置之devtool"><a href="#webpack配置之devtool" class="headerlink" title="webpack配置之devtool"></a>webpack配置之devtool</h3><p>此选项控制是否生成，以及如何生成 <em>source map</em>。</p>
+<blockquote>
+<p>可以直接使用 <em>SourceMapDevToolPlugin/EvalSourceMapDevToolPlugin</em> 来替代使用 devtool 选项</p>
+</blockquote>
+<h3 id="module-noParse"><a href="#module-noParse" class="headerlink" title="module.noParse"></a>module.noParse</h3><p>防止 webpack 解析那些任何与给定正则表达式相匹配的文件。忽略的文件中不应该含有 import, require, define 的调用，或任何其他导入机制。忽略大型的 library 可以提高构建性能。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">noParse: <span class="regexp">/jquery|lodash/</span></span><br></pre></td></tr></table></figure>
+
+<p>或者你也可以写为</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">noParse: <span class="function">(<span class="params">content</span>) =&gt;</span> <span class="regexp">/jquery|lodash/</span>.test(content)</span><br></pre></td></tr></table></figure>
+
+<h3 id="webpack配置的导出"><a href="#webpack配置的导出" class="headerlink" title="webpack配置的导出"></a>webpack配置的导出</h3><ul>
+<li><p>导出为一个函数</p>
+<ul>
+<li><p>env : 代表在启动时传入的环境对象，例如启动命令为 <code>webpack --env.production --env.bao=foo</code>时，则 env 的值是 <code>{&quot;production&quot;:&quot;true&quot;,&quot;bao&quot;:&quot;foo&quot;}</code></p>
+</li>
+<li><p>args：代表在启动 Webpack 时所有通过命令行传入的参数，例如 <code>--config</code>、<code>--env</code>、<code>--devtool</code>，<code>webpack -h</code> 列出所有 Webpack 支持的命令行参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> UglifyJsPlugin = <span class="built_in">require</span>(<span class="string">'webpack/lib/optimize/UglifyJsPlugin'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">env, argv</span>) </span>&#123;</span><br><span class="line"><span class="keyword">const</span> plugins = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> isProduction = env[<span class="string">'production'</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在生成环境才压缩</span></span><br><span class="line"><span class="keyword">if</span> (isProduction) &#123;</span><br><span class="line">    plugins.push(</span><br><span class="line">    <span class="comment">// 压缩输出的 JS 代码</span></span><br><span class="line">    <span class="keyword">new</span> UglifyJsPlugin()</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> &#123;</span><br><span class="line">    plugins: plugins,</span><br><span class="line">    <span class="comment">// 在生成环境不输出 Source Map</span></span><br><span class="line">    devtool: isProduction ? <span class="literal">undefined</span> : <span class="string">'source-map'</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>导出一个 promise,便于需要异步地加载所需的配置变量。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      resolve(&#123;</span><br><span class="line">        entry: <span class="string">'./app.js'</span>,</span><br><span class="line">        <span class="comment">/* ... */</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;, <span class="number">5000</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>导出多个配置对象（但具体的使用场景还不太了解）<br>  某些时候，我们需要多个webpack的配置。就可以导出一个 webpack 数组，并且每份配置都会执行一遍构建。</p>
+</li>
+</ul>
+<h3 id="resolve"><a href="#resolve" class="headerlink" title="resolve"></a>resolve</h3><p>resolve : 意为解析，是一个对象，能设置模块如何被解析。</p>
+<p><strong>resolve.alias : 别名</strong></p>
+<p>进行如下配置后</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">    alias:&#123;</span><br><span class="line">         Utilities: path.resolve(__dirname, <span class="string">'src/utilities/'</span>),</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>就能将文件大导入简化为<code>import Utility from &#39;Utilities/utility&#39;;</code>,而不用写以前的<code>&quot;../../Utility</code>。</p>
+<p><strong>resolve.extensions : 扩展</strong></p>
+<p>如进行了以下的扩展配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">    extensions: [<span class="string">'.wasm'</span>, <span class="string">'.mjs'</span>, <span class="string">'.js'</span>, <span class="string">'.json'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>就能将文件导入简化为<code>import File from &#39;../path/to/file&#39;;</code>,而不用文件后缀名了。</p>
+<h3 id="如何快速定位-Webpack-速度慢的原因"><a href="#如何快速定位-Webpack-速度慢的原因" class="headerlink" title="如何快速定位 Webpack 速度慢的原因"></a>如何快速定位 Webpack 速度慢的原因</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">webpack --entry ./entry.js --output-path dist --output-file bundle.js </span><br><span class="line">--colors </span><br><span class="line">--profile </span><br><span class="line">--display-modules</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>–colors 输出结果带彩色，比如：会用红色显示耗时较长的步骤</li>
+<li>–profile 输出性能数据，可以看到每一步的耗时</li>
+<li>–display-modules 默认情况下 node_modules 下的模块会被隐藏，加上这个参数可以显示这些被隐藏的模块</li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/ShioBom">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

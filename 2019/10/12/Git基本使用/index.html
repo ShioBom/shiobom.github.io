@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        Git 学习 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>鱼玉玉玉</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git基本使用"><span class="toc-text">Git基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#将本地项目上传到码云"><span class="toc-text">将本地项目上传到码云</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#克隆"><span class="toc-text">克隆</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#远程分支"><span class="toc-text">远程分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-fetch"><span class="toc-text">git fetch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-pull"><span class="toc-text">git pull</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在本地创建、删除、发布项目分支"><span class="toc-text">在本地创建、删除、发布项目分支</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#合并分支"><span class="toc-text">合并分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#在git提交树上移动"><span class="toc-text">在git提交树上移动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分离HEAD"><span class="toc-text">分离HEAD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#撤销变更-git-reset"><span class="toc-text">撤销变更(git reset)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#出现代码冲突的情况"><span class="toc-text">出现代码冲突的情况</span></a></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        Git 学习
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-10-12 20:17:49</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#博客" title="博客">博客</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h2 id="Git基本使用"><a href="#Git基本使用" class="headerlink" title="Git基本使用"></a>Git基本使用</h2><h3 id="将本地项目上传到码云"><a href="#将本地项目上传到码云" class="headerlink" title="将本地项目上传到码云"></a>将本地项目上传到码云</h3><p>1、码云上创建一个项目 testgit (名字随你)</p>
+<p>2、本地创建一个文件夹D:/testgit，然后使用git bash    </p>
+<p>3、cd 到本地文件夹中D:/testgit，</p>
+<p>4、使用 <code>git init</code> 命令 ，初始化一个git 本地仓库（项目）,会在本地创建一个 .git 的文件夹</p>
+<p>5、使用<code>git remote add origin https://gitee.com/你的码云用户名/testgit</code>      //添加远程仓库</p>
+<p>6、使用 <code>git pull origin master</code> 命令，将码云上的仓库pull到本地文件夹</p>
+<p>7、将要上传的文件，添加到刚刚创建的文件夹</p>
+<p>8、使用<code>git add .</code> 或者 <code>git add + 文件名</code> (将文件保存到缓存区)</p>
+<p>9、使用<code>git commit -m &#39;描述新添加的文件内容&#39;</code>  (就是注释)   （文件保存到本地仓库）</p>
+<p>10、使用<code>git push origin master</code> ，将本地仓库推送到远程仓库<br>如果失败 ：<code>git push -f -u origin master</code></p>
+<h3 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h3><p>1、cd 到你想要保存远程仓库项目的文件夹<br>2、使用 git clone 远程仓库地址</p>
+<h3 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h3><p>远程分支有一个命名规范 —— 它们的格式是:<code>&lt;remote name&gt;/&lt;branch name&gt;</code>因此，如果你看到一个名为 <code>origin/master</code> 的分支，那么这个分支就叫 <code>master</code>，远程仓库的名称就是 <code>origin</code>。只有当远程仓库更新后，origin/master分支才会更新。</p>
+<h3 id="git-fetch"><a href="#git-fetch" class="headerlink" title="git fetch"></a><code>git fetch</code></h3><ul>
+<li>从远程仓库下载本地仓库中缺失的提交记录</li>
+<li>更新远程分支指针(如 <code>origin/master</code>)</li>
+<li>git fetch 并==不会改变你本地仓库的状态==。它==不会更新你的 master 分支==，也==不会修改你磁盘上的文件==。</li>
+<li>如果要更新本地分支，需要<code>git merge origin/master</code></li>
+</ul>
+<blockquote>
+<p>远程分支反映了远程仓库在你最后一次与它通信时的状态，git fetch 就是你与远程仓库通信的方式了</p>
+</blockquote>
+<h3 id="git-pull"><a href="#git-pull" class="headerlink" title="git pull"></a><code>git pull</code></h3><ul>
+<li><strong>git pull</strong> 就是 <code>git fetch</code> 和 <code>git merge &lt;just-fetched-branch&gt;</code> 的缩写！</li>
+<li><strong>git pull –rebase</strong>就是<code>git  fetch</code> 和<code>git  rebase &lt;just-fetched-branch&gt;</code> 的简写！</li>
+<li>推送主分支<h2 id="在本地创建、删除、发布项目分支"><a href="#在本地创建、删除、发布项目分支" class="headerlink" title="在本地创建、删除、发布项目分支"></a>在本地创建、删除、发布项目分支</h2>过程</li>
+</ul>
+<ol>
+<li>在本地新建一个分支： <code>git branch newBranch</code></li>
+<li>切换到你的新分支: <code>git checkout newBranch</code></li>
+<li>创建并切换到新分支： <code>git checkout -b newBranch</code></li>
+<li>将新分支发布在远程仓库上： <code>git push origin newBranch</code></li>
+<li>在本地删除一个分支： <code>git branch -d newBranch</code></li>
+<li>在远程仓库删除一个分支： <code>git push origin :newBranch</code>   (分支名前的冒号代表删除)</li>
+</ol>
+<blockquote>
+<p>创建一个新的分支同时切换到新创建的分支 <code>git checkout -b &lt;your-branch-name&gt;</code></p>
+</blockquote>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><p><strong>方式一：<code>git merge</code></strong></p>
+<ol>
+<li>切换回主分支：<code>git checkout master</code></li>
+<li>合并分支：<code>git merge origin/index-swiper</code></li>
+<li>推送到远程仓库：<code>git push</code></li>
+</ol>
+<p><strong>方式二 ：<code>git rebase 目标分支</code></strong></p>
+<h2 id="在git提交树上移动"><a href="#在git提交树上移动" class="headerlink" title="在git提交树上移动"></a>在git提交树上移动</h2><p><strong>HEAD(指定提交记录的哈希值)</strong></p>
+<blockquote>
+<p>head总是指向当前分支上最近一次==提交记录==，大多数修改提交树的git命令都是从改变head的指向开始的，通常指向分支名</p>
+</blockquote>
+<h3 id="分离HEAD"><a href="#分离HEAD" class="headerlink" title="分离HEAD"></a>分离HEAD</h3><ul>
+<li><code>git checkout 提交记录</code>:指向具体的提交记录</li>
+<li><code>git log</code>:查看提交记录的哈希值</li>
+<li><code>git checkout master^</code>: 使用 <code>^</code> 向上移动 1 个提交记录，</li>
+<li><code>git checkout master~&lt;num&gt;</code>: 使用 <code>~&lt;num&gt;</code> 向上移动多个提交记录，如 <code>~3</code>,<code>&lt;num&gt;</code> 默认为 1.</li>
+<li><code>git checkout HEAD^</code>:移动到上一个提交记录，我们可以一直使用 <code>HEAD^</code> 向上移动</li>
+<li><code>git branch -f master HEAD~3</code>:将 master 分支强制指向 HEAD 的第 3 级父提交。</li>
+</ul>
+<h3 id="撤销变更-git-reset"><a href="#撤销变更-git-reset" class="headerlink" title="撤销变更(git reset)"></a>撤销变更(git reset)</h3><p><strong>方式一：<code>git reset</code></strong></p>
+<p>git reset 通过把分支记录回退几个提交记录来实现撤销改动。你可以将这想象成“改写历史”。git reset 向上移动分支，原来指向的提交记录就跟从来没有提交过一样</p>
+<ul>
+<li><code>--soft</code>:不删除工作区改动代码,撤销git commit, 不撤销 git add.</li>
+<li><code>--hard</code>: 删除工作区改动代码, 撤销 git commit ,撤销 git add, <code>git reset --mixed HEAD^</code> 和 <code>git reset HEAD^</code> 效果是一样的。</li>
+<li><code>--mixed</code>: 不删除工作区改动代码,撤销 git commit,撤销 git add . 操作</li>
+</ul>
+<p>如:<code>git reset --soft HEAD^</code>:撤销上一次的提交记录, 仅仅是撤销 commit 操作, 自己写的代码仍然保留.</p>
+<blockquote>
+<p>虽然在你的本地分支中使用 git reset 很方便，但是这种“改写历史”的方法对大家一起使用的远程分支是无效的哦！为了撤销更改并分享给别人，我们需要使用 git revert</p>
+</blockquote>
+<p><strong>方式二：<code>git revert</code></strong></p>
+<p>实际就是撤销更改后重新提交一次，revert 之后就可以把你的更改推送到远程仓库与别人分享啦。</p>
+<h3 id="出现代码冲突的情况"><a href="#出现代码冲突的情况" class="headerlink" title="出现代码冲突的情况"></a>出现代码冲突的情况</h3><ul>
+<li>远程和本地修改了同样的代码</li>
+<li>不同分支修改了同样的代码</li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/ShioBom">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>

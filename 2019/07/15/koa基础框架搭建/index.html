@@ -150,11 +150,11 @@
 <p>创建app.js</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Koa = <span class="built_in">require</span>(<span class="string">'koa'</span>);</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> Koa();</span><br><span class="line"></span><br><span class="line">app.use(<span class="keyword">async</span> ctx =&gt; &#123;</span><br><span class="line">  ctx.body = <span class="string">'Wise Wrong'</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
 
-<p>在 package.json 中添加启动指令<br><img src="/script.png" alt="&quot;start&quot;:&quot;node app.js&quot;"><br>一个基础的koa项目就完成了<br>如果觉得可以手动搭建麻烦，可以使用脚手架 koa-generato 来生成项目</p>
+<p>在 package.json 中添加启动指令<br><img src="/script.png" alt="&quot;start&quot;:&quot;node app.js&quot;"></p>
+<p>一个基础的koa项目就完成了<br>如果觉得可以手动搭建麻烦，可以使用脚手架 koa-generato 来生成项目</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install koa-generator -g</span><br><span class="line">koa2 project_name</span><br></pre></td></tr></table></figure>
 
 <p>再执行 npm install 安装依赖，npm start 启动项目</p>
-<p>##</p>
 
         
         <br />

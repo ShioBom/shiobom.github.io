@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        css相关知识补充 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>鱼玉玉玉</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#清除浮动，元素水平垂直居中，文字显示省略号"><span class="toc-text">清除浮动，元素水平垂直居中，文字显示省略号</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#元素水平垂直居中"><span class="toc-text">元素水平垂直居中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#清除浮动"><span class="toc-text">清除浮动</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#单行文本溢出显示省略号"><span class="toc-text">单行文本溢出显示省略号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#视口"><span class="toc-text">视口</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#避免资源未加载完撑不开父元素的方式"><span class="toc-text">避免资源未加载完撑不开父元素的方式</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        css相关知识补充
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2019-07-29 20:17:49</span></span>
+        
+        <span class="attr">Tags：/
+        
+        <a class="tag" href="/tags/#css" title="css">css</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#省略号" title="省略号">省略号</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#元素水平垂直居中" title="元素水平垂直居中">元素水平垂直居中</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#改变滚动条样式" title="改变滚动条样式">改变滚动条样式</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h3 id="清除浮动，元素水平垂直居中，文字显示省略号"><a href="#清除浮动，元素水平垂直居中，文字显示省略号" class="headerlink" title="清除浮动，元素水平垂直居中，文字显示省略号"></a>清除浮动，元素水平垂直居中，文字显示省略号</h3><h5 id="元素水平垂直居中"><a href="#元素水平垂直居中" class="headerlink" title="元素水平垂直居中"></a>元素水平垂直居中</h5><ul>
+<li><p>方式1：额外标签法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">.box&#123; </span><br><span class="line">	width:200px; </span><br><span class="line">	height: 200px; </span><br><span class="line">	border:1px solid red; </span><br><span class="line">	text-align: center;</span><br><span class="line">	&#125;</span><br><span class="line">.sub&#123; </span><br><span class="line">	width:100px; </span><br><span class="line">	height: 100px; </span><br><span class="line">	background: blue; </span><br><span class="line">	display: inline-block; </span><br><span class="line">	vertical-align: middle;</span><br><span class="line">	&#125;</span><br><span class="line">.box span&#123; </span><br><span class="line">	display: inline-block; </span><br><span class="line">	width:0; height: 100%;  </span><br><span class="line">	vertical-align: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方式2：<br>position: absolute;</p>
+<pre><code>top: 50%;
+left: 50%;
+margin-left: -50px;
+margin-top: -50px;</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">.box2 &#123;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        border: 1px solid red;</span><br><span class="line">        position: relative;</span><br><span class="line">      &#125;</span><br><span class="line">.sub2 &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        background: blue;</span><br><span class="line">        position: absolute;</span><br><span class="line">        top: 50%;</span><br><span class="line">        left: 50%;</span><br><span class="line">        margin-left: -50px;</span><br><span class="line">        margin-top: -50px;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方式3<br>position: absolute;</p>
+<pre><code>top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">.box3 &#123;</span><br><span class="line">       width: 200px;</span><br><span class="line">       height: 200px;</span><br><span class="line">       border: 1px solid red;</span><br><span class="line">       position: relative;</span><br><span class="line">     &#125;</span><br><span class="line">.sub3 &#123;</span><br><span class="line">       width: 100px;</span><br><span class="line">       height: 100px;</span><br><span class="line">       background: blue;</span><br><span class="line">       position: absolute;</span><br><span class="line">       top: 0;</span><br><span class="line">       left: 0;</span><br><span class="line">       right: 0;</span><br><span class="line">       bottom: 0;</span><br><span class="line">       margin: auto;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>方式4</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.box4 &#123;</span><br><span class="line">        width: 200px;</span><br><span class="line">        height: 200px;</span><br><span class="line">        border: 1px solid red;</span><br><span class="line">        margin: 20px;</span><br><span class="line">        text-align: center;</span><br><span class="line">        display: table-cell;</span><br><span class="line">        vertical-align: middle;</span><br><span class="line">      &#125;</span><br><span class="line"> .sub4 &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 100px;</span><br><span class="line">        background: blue;</span><br><span class="line">        display: inline-block;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h5><ul>
+<li><p>在浮动元素末尾添加一个空的标签(基本不使用)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>父元素设置 overflow：hidden</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">overflow：hidden</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>父元素也设置浮动</p>
+<blockquote>
+<p>缺点：使得与父元素相邻的元素的布局会受到影响，不推荐使用</p>
+</blockquote>
+</li>
+<li><ul>
+<li>使用:after 伪元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:after &#123;</span><br><span class="line">	content:&quot;.&quot;; </span><br><span class="line">	display:block; </span><br><span class="line">	height:0; </span><br><span class="line">	visibility:hidden; </span><br><span class="line">	clear:both; </span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="单行文本溢出显示省略号"><a href="#单行文本溢出显示省略号" class="headerlink" title="单行文本溢出显示省略号"></a>单行文本溢出显示省略号</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">overflow: hidden;</span><br><span class="line">text-overflow:ellipsis;</span><br><span class="line">white-space: nowrap;</span><br></pre></td></tr></table></figure>
+
+<h5 id="视口"><a href="#视口" class="headerlink" title="视口"></a>视口</h5><figure class="highlight htmlbars"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximun-scale=1.0,user-scalable=no"&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>width:可视区域的宽度，值可为数字或关键词device-width</li>
+<li>intial-scale:页面首次被显示是可视区域的缩放级别，取值1.0则页面按实际尺寸显示，无任何缩放</li>
+<li>maximum-scale=1.0, minimum-scale=1.0;<br>可视区域的缩放级别 maximum-scale用户可将页面放大的程序，1.0将禁止用户放大到实际尺寸之上。</li>
+<li>user-scalable:是否可对页面进行缩放，no 禁止缩放</li>
+</ul>
+<h5 id="避免资源未加载完撑不开父元素的方式"><a href="#避免资源未加载完撑不开父元素的方式" class="headerlink" title="避免资源未加载完撑不开父元素的方式"></a>避免资源未加载完撑不开父元素的方式</h5><p>用以下方式，即使wrapper内的图片未撑开，也会有padding占据空间，布局不会发生混乱</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.wrapper</span><br><span class="line">		height:0</span><br><span class="line">        overflow:hidden</span><br><span class="line">        width:100%</span><br><span class="line">        padding-bottom:32.53% </span><br><span class="line">        //相当于宽度的31.25%,通过计算得来的</span><br></pre></td></tr></table></figure>
+
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/ShioBom">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
